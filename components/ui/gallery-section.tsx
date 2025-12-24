@@ -4,7 +4,23 @@ import { motion } from "framer-motion";
 import siteContent from "@/data/site-content.json";
 import Image from "next/image";
 import { useRef } from "react";
-import { getAssetPath } from "@/lib/utils";
+
+// Static imports for Gallery
+import gallery1 from "@/public/images/gallery-1.jpg";
+import gallery2 from "@/public/images/gallery-2.jpg";
+import gallery3 from "@/public/images/gallery-3.jpg";
+import gallery4 from "@/public/images/gallery-4.jpg";
+import gallery5 from "@/public/images/gallery-5.jpg";
+import gallery6 from "@/public/images/gallery-6.jpg";
+
+const galleryImages = [
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+];
 
 export default function GallerySection() {
   const { gallery } = siteContent;
@@ -36,7 +52,7 @@ export default function GallerySection() {
           ref={carouselRef}
           className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 scrollbar-hide"
         >
-          {gallery.images.map((src, idx) => (
+          {galleryImages.map((src, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
@@ -46,10 +62,11 @@ export default function GallerySection() {
               className="min-w-[85vw] md:min-w-0 snap-center relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group"
             >
               <Image
-                src={getAssetPath(src)}
+                src={src}
                 alt={`Gallery image ${idx + 1}`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                placeholder="blur"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
