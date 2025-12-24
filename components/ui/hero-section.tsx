@@ -74,9 +74,9 @@ export default function HeroSection() {
               {hero.ctaPrimary}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <div className="flex items-center gap-2 rotate-[-15deg]">
+            {/* <div className="flex items-center gap-2 rotate-[-15deg]">
               <img src="logos/singGrey.svg" alt="" className="w-[100px]" />
-            </div>
+            </div> */}
           </motion.div>
         </div>
 

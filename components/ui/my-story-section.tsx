@@ -55,7 +55,7 @@ export default function MyStorySection() {
             </h2>
           </motion.div>
 
-          <div className="prose prose-lg prose-stone dark:prose-invert max-w-none font-sans text-stone-gray dark:text-gray-300 leading-relaxed text-lg">
+          <div className="prose prose-lg prose-stone dark:prose-invert max-w-none font-serif text-stone-gray dark:text-gray-300 leading-relaxed text-lg">
             {/* Paragraph 1 with Drop Cap */}
             <motion.p
               initial={{ opacity: 0, y: 10 }}

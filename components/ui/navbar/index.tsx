@@ -43,12 +43,12 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <NavbarDesktop />
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         {/* Mobile Toggle & Theme */}
         <div className="flex items-center gap-4 md:hidden">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <NavbarMobileToggle
             isOpen={isMobileMenuOpen}
             setIsOpen={setIsMobileMenuOpen}

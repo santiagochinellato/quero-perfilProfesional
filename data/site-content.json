@@ -7,6 +7,7 @@
     "whatsappLink": "https://wa.me/5492615581683"
   },
   "problem": {
+    "label": "¿Te suena familiar?",
     "title": "La excelencia técnica no debería costar tu salud",
     "questions": [
       "¿Tu equipo es brillante técnicamente pero falla en lo humano?",
@@ -28,6 +29,7 @@
     ]
   },
   "differentials": {
+    "label": "→ Lo que me diferencia",
     "title": "No soy un coach externo. Soy uno de ustedes.",
     "items": [
       {
