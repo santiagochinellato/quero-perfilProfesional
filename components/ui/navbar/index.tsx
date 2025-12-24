@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 import NavbarDesktop from "./navbar-desktop";
 import NavbarMobileToggle from "./navbar-mobile-toggle";
 import NavbarMobileMenu from "./navbar-mobile-menu";
@@ -35,7 +36,7 @@ export default function Navbar() {
           className="text-xl md:text-2xl font-bold font-serif text-navy-deep dark:text-warm-white"
         >
           <Image
-            src="/logos/signatureQuero.svg"
+            src={getAssetPath("/logos/signatureQuero.svg")}
             alt="Martín Quero Signature"
             width={250}
             height={50}

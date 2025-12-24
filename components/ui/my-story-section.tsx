@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import siteContent from "@/data/site-content.json";
+import { getAssetPath } from "@/lib/utils";
 
 export default function MyStorySection() {
   const { myStory } = siteContent;
@@ -23,7 +24,7 @@ export default function MyStorySection() {
         >
           <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/queroBlackandWhite.webp"
+              src={getAssetPath("/images/queroBlackandWhite.webp")}
               alt="Martín Quero - De la Ciencia al Coaching"
               fill
               className="object-cover grayscale transition-all duration-700"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import siteContent from "@/data/site-content.json";
+import { getAssetPath } from "@/lib/utils";
 
 export default function HeroSection() {
   const { hero } = siteContent;
@@ -96,7 +97,7 @@ export default function HeroSection() {
               {/* Placeholder for Image - Using a gradient for now matching the mood */}
               <div className="w-full h-full bg-gradient-to-b from-stone-300 to-stone-400 opacity-50 absolute inset-0 mix-blend-multiply"></div>
               <Image
-                src="/images/martinQuero.webp"
+                src={getAssetPath("/images/martinQuero.webp")}
                 alt="Dr. Martín Quero"
                 fill
                 className="object-cover"

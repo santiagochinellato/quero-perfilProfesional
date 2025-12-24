@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import siteContent from "@/data/site-content.json";
 import Image from "next/image";
 import { useRef } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 export default function GallerySection() {
   const { gallery } = siteContent;
@@ -45,7 +46,7 @@ export default function GallerySection() {
               className="min-w-[85vw] md:min-w-0 snap-center relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group"
             >
               <Image
-                src={src}
+                src={getAssetPath(src)}
                 alt={`Gallery image ${idx + 1}`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
