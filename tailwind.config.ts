@@ -30,6 +30,7 @@ const config: Config = {
                 sans: ["var(--font-inter)", "sans-serif"],
                 serif: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],
                 handwritten: ["var(--font-caveat)", "cursive"],
+                signature: ["var(--font-holiday)", "cursive"],
             },
         },
     },

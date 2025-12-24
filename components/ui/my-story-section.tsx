@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import siteContent from "@/data/site-content.json";
-import myStoryImg from "@/public/images/queroBlackandWhite.webp";
+import myStoryImg from "@/public/images/quero-w.webp";
 
 export default function MyStorySection() {
   const { myStory } = siteContent;

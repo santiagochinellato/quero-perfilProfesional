@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Playfair_Display, Caveat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Providers from "@/components/providers";
 import SmoothScroll from "@/components/smooth-scroll";
@@ -27,6 +28,11 @@ const playfair = Playfair_Display({
 const caveat = Caveat({
   variable: "--font-caveat",
   subsets: ["latin"],
+});
+
+const holiday = localFont({
+  src: "./fonts/HolidayFree.otf",
+  variable: "--font-holiday",
 });
 
 export const metadata: Metadata = {
@@ -71,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${caveat.variable} antialiased bg-warm-white dark:bg-[#0F172A]`}
+        className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${caveat.variable} ${holiday.variable} antialiased bg-warm-white dark:bg-[#0F172A]`}
       >
         <Providers>
           <SmoothScroll />
