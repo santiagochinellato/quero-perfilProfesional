@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { getAssetPath } from "@/lib/utils";
 import NavbarDesktop from "./navbar-desktop";
 import NavbarMobileToggle from "./navbar-mobile-toggle";
 import NavbarMobileMenu from "./navbar-mobile-menu";
 import ThemeToggle from "../theme-toggle";
 import siteContent from "@/data/site-content.json";
+
+import logo from "@/public/logos/signatureQuero.svg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +37,7 @@ export default function Navbar() {
           className="text-xl md:text-2xl font-bold font-serif text-navy-deep dark:text-warm-white"
         >
           <Image
-            src={getAssetPath("/logos/signatureQuero.svg")}
+            src={logo}
             alt="Martín Quero Signature"
             width={250}
             height={50}
