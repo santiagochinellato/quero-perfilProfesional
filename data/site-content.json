@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "title": "Hablo tu idioma. Entiendo tu estrés.",
+    "subtitle": "Te ayudo a liderar sin quemarte.",
+    "description": "Soy Martín Quero, Doctor en Ciencias y Coach Ontológico. Durante más de 10 años trabajé en investigación, dirigí equipos, viví el estrés del laboratorio y la presión de la clínica. Hoy acompaño a profesionales y equipos de salud, ciencia e innovación a gestionar el estrés, comunicar con claridad y liderar sin agotarse.",
+    "ctaPrimary": "Agendá una sesión exploratoria sin costo",
+    "whatsappLink": "https://wa.me/5492615581683"
+  },
+  "problem": {
+    "title": "La excelencia técnica no debería costar tu salud",
+    "questions": [
+      "¿Tu equipo es brillante técnicamente pero falla en lo humano?",
+      "¿El estrés está afectando los resultados clínicos o de investigación?",
+      "¿Tus profesionales evitan conversaciones difíciles con pacientes o tutores?",
+      "¿La rotación de personal es alta y el clima laboral tenso?"
+    ],
+    "closing": "No estás solo. Y no es solo \"parte del trabajo\"."
+  },
+  "myStory": {
+    "label": "Mi historia →",
+    "title": "De la Ciencia al Coaching",
+    "imageCaption": "“La ciencia me enseñó rigor. La vida me enseñó humanidad.”",
+    "quote": "No dejé la ciencia. Encontré una forma distinta de aplicarla.",
+    "paragraphs": [
+      "Pasé más de 10 años en investigación científica. Publiqué papers, dirigí proyectos, gestioné equipos, di clases en la universidad. Conocí la adrenalina de un descubrimiento y el peso de las responsabilidades interminables.",
+      "También viví el estrés crónico. La frustración de los rechazos. Las guardias interminables. La sensación de que \"nunca alcanza\". Vi colegas brillantes abandonar carreras por agotamiento.",
+      "En ese camino descubrí que las herramientas para gestionar el factor humano existen, son concretas, y funcionan."
+    ]
+  },
+  "differentials": {
+    "title": "No soy un coach externo. Soy uno de ustedes.",
+    "items": [
+      {
+        "icon": "Microscope",
+        "title": "VETERINARIO (Ph.D.)",
+        "description": "Doctor en Ciencias Veterinarias, UNL. +10 años en investigación y docencia."
+      },
+      {
+        "icon": "Users",
+        "title": "COACH ONTOLÓGICO",
+        "description": "Especializado en equipos de alta exigencia y comunicación en contextos críticos."
+      },
+      {
+        "icon": "Network",
+        "title": "FACILITADOR SISTÉMICO",
+        "description": "Trabajo con enfoque sistémico para conflictos organizacionales y dinámicas de equipo."
+      }
+    ],
+    "closing": "No vengo a 'motivarte'. Vengo a darte herramientas probadas que uso yo mismo desde hace años."
+  },
+  "services": {
+    "title": "Cómo puedo ayudarte",
+    "items": [
+      {
+        "title": "Tu equipo técnico es brillante. Hagamos que funcione humanamente.",
+        "questions": [
+          "¿Tus veterinarios evitan hablar de eutanasia?",
+          "¿Los tutores se quejan de falta de empatía?"
+        ],
+        "details": [
+          "Comunicación de malas noticias",
+          "Gestión del duelo",
+          "Relación médico-paciente / veterinario-tutor",
+          "Protocolos para situaciones difíciles"
+        ],
+        "result": "Equipos que salvan vidas sin perder su humanidad.",
+        "cta": "Consultar por programa para clínicas"
+      },
+      {
+        "title": "Investigar no debería quemarte",
+        "questions": [
+          "¿Tu equipo sufre estrés crónico?",
+          "¿Los rechazos de papers afectan la moral?"
+        ],
+        "details": [
+          "Tolerancia a la frustración en investigación",
+          "Gestión del estrés en alta exigencia",
+          "Prevención de burnout",
+          "Comunicación efectiva interdisciplinaria"
+        ],
+        "result": "Equipos que investigan mejor porque trabajan mejor.",
+        "cta": "Consultar por programa para laboratorios"
+      },
+      {
+        "title": "Liderás técnicos. Te ayudo a liderarlos humanamente.",
+        "questions": [
+          "¿Sos director de área o coordinador técnico?",
+          "¿Tu desafío no es la ciencia, sino gestionar personas?"
+        ],
+        "details": [
+          "Gestión de equipos de alto rendimiento",
+          "Resolución de conflictos",
+          "Comunicación efectiva con tu equipo",
+          "Habilidades blandas sin perder autoridad técnica"
+        ],
+        "result": "Líderes respetados por su expertise y seguidos por su humanidad.",
+        "cta": "Consultar por coaching individual"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen quienes trabajaron conmigo",
+    "list": [
+      {
+        "quote": "Martín no solo entiende la presión de trabajar en una clínica veterinaria, la vivió. Sus herramientas para comunicar eutanasias transformaron la forma en que nuestro equipo acompaña a los tutores.",
+        "author": "Dra. [Nombre Placeholder]",
+        "role": "Directora Clínica Veterinaria"
+      },
+      {
+        "quote": "Después de 5 años en investigación estaba al borde del burnout. El coaching con Martín me ayudó a gestionar la frustración de los rechazos sin perder el amor por lo que hago.",
+        "author": "Lic. [Nombre Placeholder]",
+        "role": "Investigador"
+      },
+      {
+        "quote": "Contraté a Martín para un taller de soft skills con mi equipo técnico. Lo que me sorprendió fue que no lo sintieron como 'un curso más'. Lo sintieron como un colega que los entendía.",
+        "author": "Ing. [Nombre Placeholder]",
+        "role": "Gerente I+D"
+      }
+    ]
+  },
+  "authority": {
+    "title": "Mi respaldo técnico",
+    "items": [
+      "Doctor en Ciencias Veterinarias (Ph.D.), UNL",
+      "+10 años como Profesor Universitario",
+      "Director de Proyectos de Investigación (CONICET)",
+      "12 publicaciones científicas internacionales",
+      "58 presentaciones en congresos",
+      "Coach Ontológico Profesional (AACOP)"
+    ],
+    "ctaCV": "Ver mi trayectoria completa (PDF)"
+  },
+  "contact": {
+    "title": "Hablemos de tu equipo",
+    "description": "¿Liderás un equipo técnico que necesita apoyo? ¿Sos profesional y sentís que el estrés te está superando? Te ofrezco una sesión exploratoria sin costo.",
+    "formFields": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "type": "Tipo de consulta",
+      "typeOptions": ["Profesional individual", "Líder de equipo", "Institución"],
+      "message": "Contame brevemente qué necesitás"
+    },
+    "cta": "Solicitar sesión exploratoria",
+    "direct": {
+      "whatsapp": "+54 (261) 155581683",
+      "email": "aamartinquero@gmail.com"
+    }
+  },
+  "navbar": {
+    "logoAlt": "Martín Quero - Coach Ontológico",
+    "menu": [
+      {"name": "Inicio", "href": "#"},
+      {"name": "Servicios", "href": "#servicios"},
+      {"name": "Sobre Mí", "href": "#sobre-mi"},
+      {"name": "Testimonios", "href": "#testimonios"},
+      {"name": "Contacto", "href": "#contacto"}
+    ],
+    "whatsappLink": "https://wa.me/5492615581683"
+  },
+  "footer": {
+    "title": "Martín Quero",
+    "subtitle": "Coach Ontológico Profesional",
+    "description": "Doctor en Ciencias Veterinarias (Ph.D.)",
+    "location": "Mendoza, Argentina",
+    "email": "aamartinquero@gmail.com",
+    "phone": "+54 (261) 155581683",
+    "social": {
+      "linkedin": "https://linkedin.com/in/martin-quero-a7b9b61a3"
+    },
+    "copyright": "© 2025 Martín Quero. Todos los derechos reservados."
+  },
+  "gallery": {
+    "label": "Momentos reales",
+    "title": "En acción",
+    "description": "Más de 10 años acompañando equipos técnicos, científicos y de salud en Argentina.",
+    "images": [
+      "/images/gallery-6.jpg",
+      "/images/gallery-5.jpg",
+      "/images/gallery-4.jpg",
+      "/images/gallery-3.jpg",
+      "/images/gallery-2.jpg",
+      "/images/gallery-1.jpg"
+    ]
+  }
+}

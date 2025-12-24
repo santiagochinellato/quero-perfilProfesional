@@ -1,0 +1,762 @@
+PROMPT PARA ANTIGRAVITY (GEMINI 3 PRO AGENT)
+Proyecto: Landing Page Profesional - Dr. Martín Quero
+
+STACK TECNOLÓGICO REQUERIDO
+Usar exactamente el mismo stack que pwa-landing:
+- Next.js 16.x (App Router)
+- React 19.2.0
+- TypeScript 5.x
+- Tailwind CSS 4.x
+- Framer Motion 12.x
+- Lucide React (iconos)
+- next-themes (dark/light mode)
+- Lenis (smooth scroll)
+
+IMPORTANTE: NO usar Sanity CMS. Todo el contenido será estático en JSON como en el proyecto de referencia.
+
+CONTEXTO DEL PROYECTO
+Crear una landing page profesional one-page para Dr. Martín Quero, Coach Ontológico especializado en equipos científicos y de salud.
+Perfil del cliente:
+Doctor en Ciencias Veterinarias (Ph.D.)
+Coach Ontológico Profesional y de Equipos
+Facilitador en Configuraciones Sistémicas
++10 años en investigación científica y docencia universitaria
+Especializado en: Equipos técnicos, científicos, salud, liderazgo, comunicación en crisis
+Público objetivo:
+Directores de clínicas veterinarias y laboratorios
+Jefes de I+D en empresas biotech/farmacéuticas
+Profesionales de salud bajo estrés (veterinarios, investigadores, médicos)
+Instituciones educativas (RRHH, universidades)
+Objetivo del sitio: Generar confianza y conversiones (solicitudes de sesión exploratoria) diferenciándose del coaching genérico mediante la autoridad científica.
+
+ARQUITECTURA DEL PROYECTO
+Estructura de Carpetas (Igual que PWA-Landing)
+project-root/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── globals.css
+│   ├── robots.txt
+│   └── sitemap.ts
+├── components/
+│   ├── providers.tsx
+│   ├── smooth-scroll.tsx
+│   ├── seo/
+│   │   └── local-business-schema.tsx
+│   └── ui/
+│       ├── navbar/
+│       │   ├── index.tsx
+│       │   ├── navbar-desktop.tsx
+│       │   ├── navbar-mobile-menu.tsx
+│       │   └── navbar-mobile-toggle.tsx
+│       ├── hero-section.tsx
+│       ├── problem-section.tsx
+│       ├── my-story-section.tsx
+│       ├── differentials-section.tsx
+│       ├── services-section.tsx
+│       ├── testimonials-section.tsx
+│       ├── gallery-section.tsx
+│       ├── authority-section.tsx
+│       ├── contact-section.tsx
+│       ├── footer/
+│       │   ├── index.tsx
+│       │   ├── footer-links.tsx
+│       │   └── footer-socials.tsx
+│       ├── spotlight.tsx
+│       ├── glass-layer.tsx
+│       ├── magnetic-cursor.tsx
+│       ├── client-wrapper.tsx
+│       └── theme-toggle.tsx
+├── data/
+│   └── site-content.json
+├── public/
+│   ├── logos/
+│   ├── images/
+│   └── og-image.jpg
+├── lib/
+│   └── utils.ts
+├── tailwind.config.ts
+├── next.config.ts
+├── package.json
+└── tsconfig.json
+
+
+CONFIGURACIÓN INICIAL
+1. package.json
+{
+  "name": "martin-quero-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.25",
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.1",
+    "next-themes": "^0.4.6",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "browserslist": [
+    "chrome >= 100",
+    "safari >= 15",
+    "firefox >= 100",
+    "edge >= 100",
+    "not dead",
+    "not ie 11"
+  ]
+}
+
+2. tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+    darkMode: 'class',
+    content: [
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                // Paleta principal: Azul Marino + Terracota
+                "navy-deep": "#1B3A52",
+                "terracota": "#C85A3C",
+                "stone-gray": "#6B7280",
+                "warm-white": "#FAFAF9",
+                "ice-gray": "#F3F4F6",
+                
+                // Semantic Colors
+                background: "var(--background)",
+                foreground: "var(--foreground)",
+                primary: "var(--primary)",
+                "primary-dim": "var(--primary-dim)",
+                surface: "var(--surface)",
+                border: "var(--border)",
+                muted: "var(--muted)",
+                accent: "var(--accent)",
+            },
+            fontFamily: {
+                sans: ["var(--font-poppins)", "sans-serif"],
+                body: ["var(--font-inter)", "sans-serif"],
+            },
+        },
+    },
+    plugins: [],
+};
+export default config;
+
+3. app/globals.css
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  /* Brand colors */
+  --color-navy-deep: #1B3A52;
+  --color-terracota: #C85A3C;
+  --color-stone-gray: #6B7280;
+  --color-warm-white: #FAFAF9;
+  --color-ice-gray: #F3F4F6;
+  
+  /* Font */
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+}
+
+:root {
+  /* Light Mode */
+  --background: #FAFAF9;
+  --foreground: #1B3A52;
+  --primary: #1B3A52;
+  --primary-dim: #2A4A62;
+  --surface: #ffffff;
+  --border: #E5E7EB;
+  --muted: #6B7280;
+  --accent: #C85A3C;
+}
+
+.dark {
+  /* Dark Mode */
+  --background: #0F172A;
+  --foreground: #FAFAF9;
+  --primary: #FAFAF9;
+  --primary-dim: #C5C9CF;
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --muted: rgba(255, 255, 255, 0.6);
+  --accent: #C85A3C;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+* {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+4. next.config.ts
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  reactCompiler: true,
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
+};
+
+export default nextConfig;
+
+
+CONTENIDO (data/site-content.json)
+{
+  "hero": {
+    "title": "Hablo tu idioma. Entiendo tu estrés.",
+    "subtitle": "Te ayudo a liderar sin quemarte.",
+    "description": "Soy Martín Quero, Doctor en Ciencias y Coach Ontológico. Durante más de 10 años trabajé en investigación, dirigí equipos, viví el estrés del laboratorio y la presión de la clínica. Hoy acompaño a profesionales y equipos de salud, ciencia e innovación a gestionar el estrés, comunicar con claridad y liderar sin agotarse.",
+    "ctaPrimary": "Agendá una sesión exploratoria sin costo",
+    "whatsappLink": "https://wa.me/5492615581683"
+  },
+  "problem": {
+    "title": "La excelencia técnica no debería costar tu salud",
+    "questions": [
+      "¿Tu equipo es brillante técnicamente pero falla en lo humano?",
+      "¿El estrés está afectando los resultados clínicos o de investigación?",
+      "¿Tus profesionales evitan conversaciones difíciles con pacientes o tutores?",
+      "¿La rotación de personal es alta y el clima laboral tenso?"
+    ],
+    "closing": "No estás solo. Y no es solo 'parte del trabajo'."
+  },
+  "myStory": {
+    "title": "De la Ciencia al Coaching: Por qué hago esto",
+    "paragraphs": [
+      "Pasé más de 10 años en investigación científica. Publiqué papers, dirigí proyectos, gestioné equipos, di clases en la universidad.",
+      "También viví el estrés crónico. La frustración de los rechazos. Las guardias interminables. La sensación de que 'nunca alcanza'.",
+      "En ese camino descubrí que las herramientas para gestionar el factor humano existen, son concretas, y funcionan. No dejé la ciencia. Encontré una forma distinta de aplicarla."
+    ]
+  },
+  "differentials": {
+    "title": "No soy un coach externo. Soy uno de ustedes.",
+    "items": [
+      {
+        "icon": "Microscope",
+        "title": "VETERINARIO (Ph.D.)",
+        "description": "Doctor en Ciencias Veterinarias, UNL. +10 años en investigación y docencia."
+      },
+      {
+        "icon": "Users",
+        "title": "COACH ONTOLÓGICO",
+        "description": "Especializado en equipos de alta exigencia y comunicación en contextos críticos."
+      },
+      {
+        "icon": "Network",
+        "title": "FACILITADOR SISTÉMICO",
+        "description": "Trabajo con enfoque sistémico para conflictos organizacionales y dinámicas de equipo."
+      }
+    ],
+    "closing": "No vengo a 'motivarte'. Vengo a darte herramientas probadas que uso yo mismo desde hace años."
+  },
+  "services": {
+    "title": "Cómo puedo ayudarte",
+    "items": [
+      {
+        "title": "Tu equipo técnico es brillante. Hagamos que funcione humanamente.",
+        "questions": [
+          "¿Tus veterinarios evitan hablar de eutanasia?",
+          "¿Los tutores se quejan de falta de empatía?"
+        ],
+        "details": [
+          "Comunicación de malas noticias",
+          "Gestión del duelo",
+          "Relación médico-paciente / veterinario-tutor",
+          "Protocolos para situaciones difíciles"
+        ],
+        "result": "Equipos que salvan vidas sin perder su humanidad.",
+        "cta": "Consultar por programa para clínicas"
+      },
+      {
+        "title": "Investigar no debería quemarte",
+        "questions": [
+          "¿Tu equipo sufre estrés crónico?",
+          "¿Los rechazos de papers afectan la moral?"
+        ],
+        "details": [
+          "Tolerancia a la frustración en investigación",
+          "Gestión del estrés en alta exigencia",
+          "Prevención de burnout",
+          "Comunicación efectiva interdisciplinaria"
+        ],
+        "result": "Equipos que investigan mejor porque trabajan mejor.",
+        "cta": "Consultar por programa para laboratorios"
+      },
+      {
+        "title": "Liderás técnicos. Te ayudo a liderarlos humanamente.",
+        "questions": [
+          "¿Sos director de área o coordinador técnico?",
+          "¿Tu desafío no es la ciencia, sino gestionar personas?"
+        ],
+        "details": [
+          "Gestión de equipos de alto rendimiento",
+          "Resolución de conflictos",
+          "Comunicación efectiva con tu equipo",
+          "Habilidades blandas sin perder autoridad técnica"
+        ],
+        "result": "Líderes respetados por su expertise y seguidos por su humanidad.",
+        "cta": "Consultar por coaching individual"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen quienes trabajaron conmigo",
+    "list": [
+      {
+        "quote": "Martín no solo entiende la presión de trabajar en una clínica veterinaria, la vivió. Sus herramientas para comunicar eutanasias transformaron la forma en que nuestro equipo acompaña a los tutores.",
+        "author": "Dra. [Nombre Placeholder]",
+        "role": "Directora Clínica Veterinaria"
+      },
+      {
+        "quote": "Después de 5 años en investigación estaba al borde del burnout. El coaching con Martín me ayudó a gestionar la frustración de los rechazos sin perder el amor por lo que hago.",
+        "author": "Lic. [Nombre Placeholder]",
+        "role": "Investigador"
+      },
+      {
+        "quote": "Contraté a Martín para un taller de soft skills con mi equipo técnico. Lo que me sorprendió fue que no lo sintieron como 'un curso más'. Lo sintieron como un colega que los entendía.",
+        "author": "Ing. [Nombre Placeholder]",
+        "role": "Gerente I+D"
+      }
+    ]
+  },
+  "authority": {
+    "title": "Mi respaldo técnico",
+    "items": [
+      "Doctor en Ciencias Veterinarias (Ph.D.), UNL",
+      "+10 años como Profesor Universitario",
+      "Director de Proyectos de Investigación (CONICET)",
+      "12 publicaciones científicas internacionales",
+      "58 presentaciones en congresos",
+      "Coach Ontológico Profesional (AACOP)"
+    ],
+    "ctaCV": "Ver mi trayectoria completa (PDF)"
+  },
+  "contact": {
+    "title": "Hablemos de tu equipo",
+    "description": "¿Liderás un equipo técnico que necesita apoyo? ¿Sos profesional y sentís que el estrés te está superando? Te ofrezco una sesión exploratoria sin costo.",
+    "formFields": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "type": "Tipo de consulta",
+      "typeOptions": ["Profesional individual", "Líder de equipo", "Institución"],
+      "message": "Contame brevemente qué necesitás"
+    },
+    "cta": "Solicitar sesión exploratoria",
+    "direct": {
+      "whatsapp": "+54 (261) 155581683",
+      "email": "aamartinquero@gmail.com"
+    }
+  },
+  "navbar": {
+    "logoAlt": "Martín Quero - Coach Ontológico",
+    "menu": [
+      {"name": "Inicio", "href": "#"},
+      {"name": "Servicios", "href": "#servicios"},
+      {"name": "Sobre Mí", "href": "#sobre-mi"},
+      {"name": "Testimonios", "href": "#testimonios"},
+      {"name": "Contacto", "href": "#contacto"}
+    ],
+    "whatsappLink": "https://wa.me/5492615581683"
+  },
+  "footer": {
+    "title": "Martín Quero",
+    "subtitle": "Coach Ontológico Profesional",
+    "description": "Doctor en Ciencias Veterinarias (Ph.D.)",
+    "location": "Mendoza, Argentina",
+    "email": "aamartinquero@gmail.com",
+    "phone": "+54 (261) 155581683",
+    "social": {
+      "linkedin": "https://linkedin.com/in/martin-quero-a7b9b61a3"
+    },
+    "copyright": "© 2025 Martín Quero. Todos los derechos reservados."
+  }
+}
+
+
+COMPONENTES PRINCIPALES
+1. Hero Section (components/ui/hero-section.tsx)
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import siteContent from "@/data/site-content.json";
+
+export default function HeroSection() {
+  const { hero } = siteContent;
+
+  return (
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-20 px-6">
+      <div className="z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+        <motion.h1
+          className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="text-foreground">{hero.title}</span>
+          <br />
+          <span className="text-accent">{hero.subtitle}</span>
+        </motion.h1>
+
+        <motion.p
+          className="text-xl md:text-2xl text-muted max-w-3xl mb-10 leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          {hero.description}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+        >
+          <a
+            href={hero.whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group px-8 py-4 bg-accent text-white font-bold text-lg rounded-full hover:opacity-90 transition-all hover:scale-105 inline-flex items-center gap-2"
+          >
+            {hero.ctaPrimary}
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </motion.div>
+      </div>
+
+      {/* Gradient Background */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full blur-[120px] bg-gradient-to-tr from-primary/20 via-accent/20 to-primary/10 pointer-events-none z-0" />
+    </section>
+  );
+}
+
+2. Services Section (components/ui/services-section.tsx)
+"use client";
+
+import { CheckCircle2 } from "lucide-react";
+import siteContent from "@/data/site-content.json";
+
+export default function ServicesSection() {
+  const { services } = siteContent;
+
+  return (
+    <section id="servicios" className="py-24 px-6 md:px-12 bg-surface">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
+          {services.title}
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.items.map((service, idx) => (
+            <div
+              key={idx}
+              className="p-8 rounded-2xl bg-background border border-border hover:border-accent transition-all group"
+            >
+              <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-accent transition-colors">
+                {service.title}
+              </h3>
+
+              <div className="space-y-3 mb-6">
+                {service.questions.map((q, i) => (
+                  <p key={i} className="text-sm text-muted italic">
+                    {q}
+                  </p>
+                ))}
+              </div>
+
+              <div className="space-y-3 mb-6">
+                {service.details.map((detail, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">{detail}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-sm font-medium text-foreground mb-6 italic">
+                Resultado: {service.result}
+              </p>
+
+              <button className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dim transition-colors">
+                {service.cta}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+3. Navbar (components/ui/navbar/index.tsx)
+Similar al proyecto de referencia pero con los colores y contenido de Martín.
+
+DISEÑO Y ESTILO
+Paleta de Colores
+Azul Marino Profundo (#1B3A52):
+Uso: Navegación, títulos principales, texto principal
+Significado: Autoridad, ciencia, medicina, confianza
+Terracota/Óxido (#C85A3C):
+Uso: CTAs, acentos, highlights
+Significado: Calidez, cercanía, humanidad
+Grises y Blancos:
+Stone Gray (#6B7280): Textos secundarios
+Warm White (#FAFAF9): Fondos principales
+Ice Gray (#F3F4F6): Fondos alternos
+Tipografía
+Títulos (H1-H3):
+Familia: Poppins SemiBold/Bold (600-700)
+Moderna, con presencia, legible
+Cuerpo:
+Familia: Inter Regular/Medium (400-500)
+Tamaño base: 18px
+Interlineado: 1.7
+Layout
+One-page con scroll suave (Lenis)
+Navegación sticky
+Secciones con fondo alternado (blanco/gris)
+Espaciado generoso (80-100px vertical entre secciones)
+Máximo 800px de ancho para bloques de texto
+
+FUNCIONALIDADES REQUERIDAS
+1. Smooth Scroll con Lenis
+Igual que en PWA-landing: components/smooth-scroll.tsx
+2. Theme Toggle (Dark/Light)
+Igual que en PWA-landing: components/ui/theme-toggle.tsx
+3. Navegación Sticky
+Con backdrop blur al hacer scroll
+4. Animaciones con Framer Motion
+Fade-in en scroll
+Hover states suaves
+Transiciones entre secciones
+5. Formulario de Contacto
+Funcional con validación básica
+6. Responsive
+Mobile-first (breakpoints: 640px, 768px, 1024px)
+7. SEO Básico
+Meta tags
+Schema.org (LocalBusiness)
+Sitemap
+
+METADATA (app/layout.tsx)
+export const metadata: Metadata = {
+  metadataBase: new URL("https://martinquero.com"),
+  title: {
+    default: "Martín Quero | Coach Ontológico para Equipos Científicos y de Salud",
+    template: "%s | Martín Quero",
+  },
+  description:
+    "Doctor en Ciencias y Coach Ontológico especializado en equipos técnicos, científicos y de salud. Gestión del estrés, liderazgo y comunicación en contextos críticos.",
+  keywords: [
+    "Coach Ontológico",
+    "Coaching para científicos",
+    "Gestión del estrés",
+    "Burnout investigadores",
+    "Liderazgo equipos técnicos",
+    "Comunicación veterinaria",
+    "Coach Mendoza",
+  ],
+  authors: [{ name: "Martín Quero" }],
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://martinquero.com",
+    title: "Martín Quero - Coach Ontológico Especializado",
+    description:
+      "Acompaño a profesionales y equipos de salud, ciencia e innovación a gestionar el estrés y liderar sin agotarse.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+
+CHECKLIST DE ENTREGA
+Estructura
+[x] Next.js 16 con App Router
+[x] TypeScript configurado
+[x] Tailwind CSS 4
+[x] Framer Motion
+[x] Lenis smooth scroll
+[x] next-themes
+Componentes
+[x] Navbar con navegación sticky
+[x] Hero Section
+[x] Problem Section
+[x] My Story Section
+[x] Differentials Section
+[x] Services Section (3 cards)
+[x] Testimonials Section
+[x] Gallery Section
+[x] Authority Section
+[x] Contact Section con formulario
+[x] Footer
+Funcionalidades
+[x] Smooth scroll
+[x] Dark/Light mode
+[x] Responsive (mobile/tablet/desktop)
+[x] Animaciones suaves
+[x] Navegación sticky con blur
+[x] Hover states
+[x] Formulario con validación
+SEO
+[x] Meta tags completos
+[x] Schema.org
+[x] Sitemap
+[x] robots.txt
+Performance
+[x] Imágenes optimizadas
+[x] Lazy loading
+[x] Sin layout shifts
+[x] Tipografías optimizadas
+
+NOTAS IMPORTANTES PARA ANTIGRAVITY
+NO usar Sanity CMS - Todo el contenido viene de data/site-content.json
+Copiar exactamente el setup de PWA-landing (package.json, configs)
+Usar la misma estructura de componentes (navbar, footer, secciones)
+Mantener el sistema de dark/light mode con next-themes
+Implementar smooth scroll con Lenis
+Respetar la paleta de colores (Azul Marino + Terracota)
+Tipografías: Poppins (títulos) + Inter (cuerpo)
+Tono del copy: Profesional pero cercano, primera persona, directo
+
+INSTRUCCIONES FINALES
+Antigravity, por favor:
+Inicializa el proyecto con npx create-next-app@latest usando las configuraciones especificadas
+Instala todas las dependencias del package.json
+Crea la estructura de carpetas exactamente como se indica
+Implementa todos los componentes siguiendo los ejemplos
+Copia las configuraciones (tailwind, next.config, tsconfig)
+Genera el archivo data/site-content.json con todo el contenido
+Verifica responsive en mobile, tablet y desktop
+Testea dark/light mode
+Asegúrate que smooth scroll funcione correctamente
+Valida que el formulario tenga campos funcionales
+Resultado esperado:
+ Landing page profesional, rápida, accesible, con diseño limpio que refleja la dualidad científica/humana de Martín Quero, lista para deployment en Vercel.
+
+
+
+1. Diagnóstico: ¿Por qué se ve "soso"?
+Exceso de Blanco Puro (#FFFFFF): Da sensación de vacío y frialdad clínica.
+Fotos de Stock Genéricas: Ese hombre sonriendo en el Hero grita "banco de imágenes". No genera confianza, genera distancia.
+Tipografía Aburrida: Todo Sans-Serif se ve muy "startup tecnológica" y poco "autoridad académica con historia".
+Grid Rígida: Caja, caja, caja. Le falta flujo orgánico.
+
+2. Nueva Dirección de Arte: "Organic Editorial"
+Vamos a cambiar las reglas visuales para mezclar lo académico (serio) con lo humano (cálido).
+A. Paleta de Colores (Adiós al blanco clínico)
+En lugar de fondo blanco puro, vamos a usar tonos "papel" o "arena" para suavizar.
+Base: Sand / Bone (#F9F8F6) o Warm Light Grey (#F5F5F0). Esto inmediatamente le da calidez de lectura.
+Primario: Mantenemos el Azul Profundo (#1B3A52) para textos y autoridad, pero usalo con moderación en fondos.
+Acento (La Cercanía): El Terracota que tenés (#C85A3C) está bien, pero usalo también en detalles sutiles (líneas, subrayados), no solo botones duros.
+Textura: Agregá un ruido sutil (grain) al fondo para que no sea plano.
+B. Tipografía (El juego de contraste)
+Para romper lo genérico, necesitamos una Serif para los títulos. Las serifas humanizan y dan autoridad (estilo paper académico o diario The New York Times).
+Títulos (H1, H2, H3): Una Serif moderna y legible como "Merriweather", "Lora" o "Playfair Display".
+Cuerpo: Mantené la Sans-Serif (Inter o Lato) para legibilidad técnica.
+Toque Humano: Una tipografía "Handwritten" (tipo firma) para notas al margen o flechas. (Ej: "Caveat" o "Reenie Beanie").
+
+3. Cambios Estructurales (Sección por Sección)
+Acá es donde tenés que meter mano en los componentes de React/Sanity:
+Hero Section (La primera impresión)
+El Cambio: No uses una foto cuadrada del tipo sonriendo.
+Propuesta:
+Layout: Split asimétrico. Texto a la izquierda, imagen a la derecha pero sin bordes duros o con una forma orgánica (máscara suave).
+Imagen: Si no tenemos foto real de Martín, usá una foto de contexto con filtro cálido (alguien escribiendo en un laboratorio, una charla café de por medio), o una foto de él en blanco y negro con alto contraste pero recortada sobre el fondo arena.
+Elemento de Cercanía: Agregá una "nota manuscrita" (SVG) cerca del título que diga algo como "Ciencia + Empatía" con una flecha señalando al copy.
+Sección "La historia" (Storytelling)
+El Cambio: Rompé las tres columnas aburridas.
+Propuesta: Hacé un diseño tipo "Magazine".
+Texto fluyendo alrededor de una imagen flotante.
+Usá una Drop Cap (Letra capital gigante) al inicio del párrafo para darle estilo editorial.
+Testimonios (Prueba Social)
+El Cambio: Las cajas blancas con sombra se ven baratas.
+Propuesta: Sacale los bordes.
+Usá comillas gigantes en color Terracota (opacity 20%) de fondo.
+Foto del testimonio en círculo, nombre en negrita, y el texto en itálica (Serif). Que parezca una cita de un libro, no una review de Amazon.
+Call to Action (CTA)
+El Cambio: El botón sólido a veces es agresivo.
+Propuesta: Acompañá el botón con una frase de reaseguro abajo, chica: "Sin compromiso. Hablemos 15 minutos."
+
+Copiá esto para forzar el cambio de estilo radicalmente:
+Markdown
+Re-design the previous landing page with a completely new Art Direction: "Warm Intellectual Editorial".
+
+**CRITICAL CHANGES TO FIX "BORING" UI:**
+
+1.  **Color Palette Shift:**
+    * REPLACE the pure white background with a **Warm Bone/Sand color (#F9F8F6)** implies paper/texture.
+    * Keep the Deep Navy (#1B3A52) for text contrast.
+    * Make the Terracotta (#C85A3C) pop more.
+
+2.  **Typography Pairing (Essential for Personality):**
+    * **Headings:** Use a distinct **Serif font** (like 'Lora', 'Merriweather' or 'Playfair Display'). This brings academic authority and warmth.
+    * **Body:** Clean Sans-serif (Inter).
+    * **Accents:** Add a "Handwritten" font style for small annotations (e.g., arrows, "nota del autor") to create the "Closeness/Cercanía" vibe.
+
+3.  **Layout & Components:**
+    * **Hero:** NOT a generic corporate layout. Use a split layout where the image creates a soft blend with the background. The H1 must be huge and Serif.
+    * **Images:** Apply a slight "sepia" or "warm grayscale" filter to images to unify them. NO generic stock photos of smiling models in suits. Use candid shots or atmospheric shots (hands on a microscope, a notebook).
+    * **"My Journey" Section:** Make it look like a magazine article. Use a drop-cap (Letra Capital).
+    * **Cards:** Remove hard shadows. Use borders with soft radiuses or just whitespace spacing.
+
+4.  **Visual Details (The "Human" Touch):**
+    * Add distinct separating lines that look like editorial dividers (thin lines).
+    * Add an SVG signature of "Martín" somewhere in the hero or footer.
+
+**Goal:** It should look like a premium article on a platform like Medium or a high-end personal portfolio, NOT a Bootstrap template.
+
+5. ¿Cómo pasamos esto a Sanity? (Tip Técnico)
+Santiago, cuando modeles esto en Sanity para tu esquema:
+Objeto pageBuilder: No hagas campos fijos. Creá un array de módulos (hero, textWithImage, servicesGrid, testimonialCarousel).
+Theme Settings: Agregá un campo en la configuración global de Sanity para elegir el "Mood" (ej: Light Mode vs Warm Mode), así podés cambiar el background color desde el CMS sin tocar código si Martín se arrepiente.
+Handwritten Annotations: Creá un campo de tipo string opcional en tus bloques que se renderice con la fuente handwritten y posición absoluta en el frontend. Eso le da vida y el cliente puede poner "tips" o "notas" personales.
+
+
