@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import NavbarDesktop from "./navbar-desktop";
 import NavbarMobileToggle from "./navbar-mobile-toggle";
 import NavbarMobileMenu from "./navbar-mobile-menu";
@@ -33,10 +34,13 @@ export default function Navbar() {
           href="/"
           className="text-xl md:text-2xl font-bold font-serif text-navy-deep dark:text-warm-white"
         >
-          <img
-            src="logos/signatureQuero.svg"
-            alt=""
-            className="lg:w-[250px] w-[150px]"
+          <Image
+            src="/logos/signatureQuero.svg"
+            alt="Martín Quero Signature"
+            width={250}
+            height={50}
+            className="lg:w-[250px] w-[150px] h-auto"
+            priority
           />
         </Link>
 
