@@ -46,7 +46,7 @@ export default function GallerySection() {
 
                 {/* Image */}
                 <Image
-                  src={image.url}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${image.url}`}
                   alt={image.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105 filter sepia-[0.15] group-hover:sepia-0"
