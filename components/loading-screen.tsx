@@ -7,10 +7,12 @@ export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Hide loading screen after animation (approx 2.5s)
+    // Hide loading screen after animation
+    // Text finishes around 1.6s + 0.8s = 2.4s.
+    // + wait time -> 4000ms total
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2800);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -23,26 +25,26 @@ export default function LoadingScreen() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3,
+        staggerChildren: 0.06, // Faster stagger
+        delayChildren: 0.2, // Start sooner
       },
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.8, ease: "easeInOut" },
+      transition: { duration: 1.0, ease: "easeInOut" }, // Smoother exit
     },
   };
 
   const letterVariants: Variants = {
-    hidden: { opacity: 0, y: 10, rotate: -5 },
+    hidden: { opacity: 0, y: 15, rotate: -3 },
     visible: {
       opacity: 1,
       y: 0,
       rotate: 0,
       transition: {
         type: "spring",
-        damping: 12,
-        stiffness: 200,
+        damping: 18, // Less bouncy
+        stiffness: 120, // Softer
       },
     },
   };
@@ -70,14 +72,13 @@ export default function LoadingScreen() {
                 </motion.span>
               ))}
               <motion.span
-                initial={{ opacity: 0, scale: 2 }}
+                initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                  delay: 2.2,
+                  delay: 1.4, // Matches end of letters approx
                   type: "spring",
-                  stiffness: 400,
-                  damping: 15,
-                  mass: 0.8,
+                  stiffness: 300,
+                  damping: 20,
                 }}
                 className="text-terracota inline-block ml-1"
               >
@@ -87,7 +88,7 @@ export default function LoadingScreen() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.7, duration: 0.8 }}
+              transition={{ delay: 1.6, duration: 0.8, ease: "easeOut" }}
               className="text-lg md:text-2xl font-serif italic text-terracota text-center tracking-wider"
             >
               Desarrollo personal aplicado
