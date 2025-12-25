@@ -389,7 +389,7 @@
     "logoAlt": "Martín Quero -  Desarrollo personal aplicado",
     "menu": [
       {"name": "Inicio", "href": "#hero"},
-      {"name": "Realidad", "href": "#problema"},
+      {"name": "Contexto", "href": "#problema"},
       {"name": "Sobre Mí", "href": "#sobre-mi"},
       {"name": "Diferenciales", "href": "#diferenciales"},
       {"name": "Servicios", "href": "#servicios"},
@@ -420,12 +420,14 @@
       "title": "Navegación",
       "items": [
         {"name": "Inicio", "href": "#hero"},
-        {"name": "Servicios", "href": "#servicios"},
-        {"name": "Sobre Mí", "href": "#sobre-mi"},
-        {"name": "Testimonios", "href": "#testimonios"},
-        {"name": "Experiencia", "href": "#galeria"},
-        {"name": "Contacto", "href": "#contacto"}
-      ]
+      {"name": "Contexto", "href": "#problema"},
+      {"name": "Sobre Mí", "href": "#sobre-mi"},
+      {"name": "Diferenciales", "href": "#diferenciales"},
+      {"name": "Servicios", "href": "#servicios"},
+      {"name": "Experiencia", "href": "#galeria"},
+      {"name": "Testimonios", "href": "#testimonios"},
+      {"name": "Contacto", "href": "#contacto"}
+    ]
     },
     "contact": {
       "title": "Contacto",

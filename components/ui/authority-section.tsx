@@ -95,7 +95,7 @@ export default function AuthoritySection() {
               process.env.NEXT_PUBLIC_BASE_PATH || ""
             }/martinQueroCV.pdf`}
             download="Martin_Quero_CV.pdf"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-navy-deep text-white rounded-full hover:bg-navy-deep/90 transition-all shadow-lg shadow-navy-deep/10 font-medium text-sm tracking-wide"
+            className="inline-flex items-center gap-2 text-terracota font-medium hover:text-navy-deep transition-colors border-b border-terracota hover:border-navy-deep pb-0.5"
           >
             {authority.ctaCV} <ArrowRight className="w-4 h-4" />
           </a>
