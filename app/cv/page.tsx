@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import cvData from "@/data/cv.json";
 
+import { useEffect } from "react";
+
 export default function CVPage() {
   const {
     perfil_profesional,
@@ -28,8 +30,25 @@ export default function CVPage() {
     window.print();
   };
 
+  useEffect(() => {
+    // Detectar si es móvil o tablet (menor a 1024px o user agent)
+    const isMobile =
+      window.innerWidth < 1024 ||
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    if (isMobile) {
+      // Pequeño delay para asegurar que se renderice todo antes de abrir el diálogo
+      const timer = setTimeout(() => {
+        window.print();
+      }, 500); // 500ms delay
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#E5E5E5] print:bg-white text-[#1B3A52] font-sans pb-20 print:pb-0">
+    <div className="min-h-screen bg-[#E5E5E5] print:bg-white text-[#1B3A52] font-sans pb-20 pt-28 md:pt-36 print:p-0 print:m-0 print:min-h-0">
       {/* Botón Flotante */}
       <button
         onClick={handlePrint}
@@ -40,9 +59,9 @@ export default function CVPage() {
       </button>
 
       {/* CONTENEDOR PRINCIPAL */}
-      <div className="max-w-[210mm] mx-auto bg-white shadow-none md:shadow-xl print:shadow-none my-0 md:my-10 print:my-0 flex flex-col min-h-[297mm]">
+      <div className="max-w-[210mm] mx-auto bg-white shadow-none md:shadow-xl print:shadow-none my-0 md:my-10 print:my-0 flex flex-col print:block min-h-screen print:min-h-0 print:h-auto print:max-w-none print:w-full relative">
         {/* HEADER */}
-        <header className="px-8 md:px-12 pt-12 pb-8 border-b-4 border-[#C85A3C]">
+        <header className="px-8 md:px-12 pt-14 pb-8 border-b-4 border-[#C85A3C]">
           <div className="flex flex-col md:flex-row gap-8 items-start justify-between">
             <div className="flex-1">
               <span className="text-xs font-bold tracking-widest uppercase text-[#C85A3C] mb-2 block">
@@ -51,7 +70,7 @@ export default function CVPage() {
               <h1 className="text-4xl md:text-5xl font-serif font-black mb-3 leading-tight tracking-tight text-[#1B3A52]">
                 {perfil_profesional.nombre_completo}
               </h1>
-              <div className="flex flex-wrap gap-x-3 gap-y-1 text-base md:text-lg font-medium text-[#6B7280]">
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-base md:text-[14px] font-medium text-[#6B7280]">
                 {perfil_profesional.titulos_principales.map((titulo, index) => (
                   <span
                     key={index}
@@ -78,7 +97,7 @@ export default function CVPage() {
           </div>
 
           {/* Abstract */}
-          <div className="mt-8 p-6 bg-[#FAFAF9] border-l-4 border-[#C85A3C] rounded-r-sm">
+          <div className=" p-6 bg-[#FAFAF9] border-l-4 border-[#C85A3C] rounded-r-sm">
             <h3 className="font-serif font-bold text-[#1B3A52] mb-2 flex items-center gap-2 text-xs uppercase tracking-widest">
               <FileText className="w-4 h-4 text-[#C85A3C]" /> Perfil Profesional
             </h3>
@@ -93,11 +112,11 @@ export default function CVPage() {
         </header>
 
         {/* GRID LAYOUT */}
-        <div className="grid grid-cols-1 md:grid-cols-12 flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-12 print:grid print:grid-cols-12 flex-1">
           {/* COLUMNA IZQUIERDA (SIDEBAR) - Ajustado padding y anchos */}
-          <aside className="md:col-span-4 bg-[#FAFAF9] p-6 border-r border-gray-100 space-y-10 print:bg-gray-50">
+          <aside className="md:col-span-4 print:col-span-4 bg-[#FAFAF9] p-6 border-r border-gray-100 space-y-10 print:bg-gray-50">
             {/* SECCIÓN CONTACTO CORREGIDA */}
-            <section>
+            <section className="break-inside-avoid">
               <h3 className="text-xs font-bold uppercase tracking-widest text-[#1B3A52] border-b border-[#C85A3C] pb-2 mb-5">
                 Contacto
               </h3>
@@ -235,7 +254,7 @@ export default function CVPage() {
           </aside>
 
           {/* COLUMNA DERECHA (CONTENIDO PRINCIPAL) */}
-          <main className="md:col-span-8 p-8 md:p-12 space-y-12">
+          <main className="md:col-span-8 print:col-span-8 p-8 md:p-12 space-y-12">
             {/* EXPERIENCIA PROFESIONAL */}
             <section className="break-inside-avoid">
               <h2 className="text-xl font-serif font-bold text-[#1B3A52] border-b-2 border-gray-100 pb-3 mb-6 flex items-center gap-3">
@@ -400,9 +419,9 @@ export default function CVPage() {
         </div>
 
         {/* FOOTER PARA IMPRESIÓN */}
-        <footer className="bg-[#FAFAF9] text-[#6B7280] py-6 text-center text-[10px] print:text-[8px] print:py-2 border-t border-gray-200 mt-auto">
+        <footer className="bg-[#FAFAF9] text-[#6B7280] py-6 text-center text-[10px] print:text-[8px] print:py-2 border-t border-gray-200 mt-auto w-full">
           <p className="uppercase tracking-widest mb-1">
-            Dr. Arnoldo Angel Martín Quero • Veterinario & Coach
+            Dr. Martín Quero • Veterinario & Coach Ontológico
           </p>
           <p>
             Documento actualizado a {new Date().getFullYear()} • Disponible en

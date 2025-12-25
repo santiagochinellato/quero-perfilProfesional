@@ -56,7 +56,7 @@ export default function LoadingScreen() {
           animate="visible"
           exit="exit"
           variants={containerVariants}
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-white"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-white print:hidden"
         >
           <div className="relative">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-signature text-navy-deep tracking-wide flex justify-center mb-2">

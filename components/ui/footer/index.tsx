@@ -11,7 +11,7 @@ export default function Footer() {
   const { footer } = siteContent;
 
   return (
-    <footer className="bg-navy-deep text-warm-white py-10 px-6">
+    <footer className="bg-navy-deep text-warm-white py-10 px-6 print:hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-white/5 pb-10">
         {/* Brand Column - Wider to push center right */}
         <div className="md:col-span-5 space-y-4 flex flex-col items-center">
