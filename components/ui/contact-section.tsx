@@ -51,11 +51,12 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-bold text-navy-deep dark:text-warm-white mb-2">
-                {contact.formFields.name}
+                {contact.formFields.name.label}
               </label>
               <input
                 required
                 type="text"
+                placeholder={contact.formFields.name.placeholder}
                 className="w-full px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-stone-gray/20 dark:border-white/10 focus:border-terracota focus:ring-1 focus:ring-terracota text-navy-deep dark:text-white transition-all outline-none"
               />
             </div>
@@ -63,20 +64,22 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-bold text-navy-deep dark:text-warm-white mb-2">
-                  {contact.formFields.email}
+                  {contact.formFields.email.label}
                 </label>
                 <input
                   required
                   type="email"
+                  placeholder={contact.formFields.email.placeholder}
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-stone-gray/20 dark:border-white/10 focus:border-terracota focus:ring-1 focus:ring-terracota text-navy-deep dark:text-white transition-all outline-none"
                 />
               </div>
               <div>
                 <label className="block text-sm font-bold text-navy-deep dark:text-warm-white mb-2">
-                  {contact.formFields.phone}
+                  {contact.formFields.phone.label}
                 </label>
                 <input
                   type="tel"
+                  placeholder={contact.formFields.phone.placeholder}
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-stone-gray/20 dark:border-white/10 focus:border-terracota focus:ring-1 focus:ring-terracota text-navy-deep dark:text-white transition-all outline-none"
                 />
               </div>
@@ -84,14 +87,14 @@ export default function ContactSection() {
 
             <div>
               <label className="block text-sm font-bold text-navy-deep dark:text-warm-white mb-2">
-                {contact.formFields.type}
+                {contact.formFields.type.label}
               </label>
               <div className="relative">
                 <select className="w-full px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-stone-gray/20 dark:border-white/10 focus:border-terracota focus:ring-1 focus:ring-terracota text-navy-deep dark:text-white transition-all appearance-none cursor-pointer outline-none">
                   <option value="" disabled selected>
                     Seleccionar...
                   </option>
-                  {contact.formFields.typeOptions.map((opt) => (
+                  {contact.formFields.type.options.map((opt) => (
                     <option key={opt} value={opt}>
                       {opt}
                     </option>
@@ -117,12 +120,12 @@ export default function ContactSection() {
 
             <div>
               <label className="block text-sm font-bold text-navy-deep dark:text-warm-white mb-2">
-                {contact.formFields.message}
+                {contact.formFields.message.label}
               </label>
               <textarea
                 required
                 rows={5}
-                placeholder={contact.formFields.message}
+                placeholder={contact.formFields.message.placeholder}
                 className="w-full px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-stone-gray/20 dark:border-white/10 focus:border-terracota focus:ring-1 focus:ring-terracota text-navy-deep dark:text-white transition-all outline-none resize-none"
               ></textarea>
             </div>

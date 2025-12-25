@@ -1,22 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "../logo";
 import NavbarDesktop from "./navbar-desktop";
 import NavbarMobileToggle from "./navbar-mobile-toggle";
 import NavbarMobileMenu from "./navbar-mobile-menu";
-import ThemeToggle from "../theme-toggle";
-import siteContent from "@/data/site-content.json";
-
-import logo from "@/public/logos/signatureQuero.svg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
-  const { navbar } = siteContent;
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
@@ -30,20 +25,10 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between ">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl md:text-2xl font-bold font-serif text-navy-deep dark:text-warm-white"
-        >
-          <Image
-            src={logo}
-            alt="Martín Quero Signature"
-            width={250}
-            height={50}
-            className="lg:w-[250px] w-[150px] h-auto"
-            priority
-          />
+        <Link href="/" className="flex items-center gap-2 group">
+          <Logo />
         </Link>
 
         {/* Desktop Menu */}

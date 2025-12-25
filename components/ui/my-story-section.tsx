@@ -11,9 +11,9 @@ export default function MyStorySection() {
   return (
     <section
       id="sobre-mi"
-      className="py-24 px-6 bg-[#F9F8F6] dark:bg-[#152031] overflow-hidden"
+      className="py-16 md:py-24 px-5 md:px-6 bg-[#F9F8F6] dark:bg-[#152031] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20 items-center lg:items-center">
         {/* Image Column (Left) */}
         <motion.div
           className="w-full lg:w-5/12 relative"
@@ -31,39 +31,39 @@ export default function MyStorySection() {
             />
           </div>
           {/* Handwritten Caption */}
-          <div className="mt-6 text-center">
-            <span className="font-handwritten text-stone-gray/80 text-lg md:text-1xl -rotate-1 block">
+          <div className="mt-4 md:mt-6 text-center">
+            <span className="font-handwritten text-stone-gray/80 text-base md:text-1xl -rotate-1 block">
               {myStory.imageCaption}
             </span>
           </div>
         </motion.div>
 
         {/* Content Column (Right) */}
-        <div className="w-full lg:w-7/12 space-y-8">
+        <div className="w-full lg:w-7/12 space-y-6 md:space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             {/* Label */}
-            <span className="text-terracota font-handwritten text-2xl lg:text-2xl block mb-2">
+            <span className="text-terracota font-handwritten text-xl lg:text-2xl block mb-2">
               {myStory.label}
             </span>
 
             {/* Title */}
-            <h2 className="text-5xl md:text-5xl font-serif font-bold text-navy-deep dark:text-warm-white leading-[1.1] mb-8">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-navy-deep dark:text-warm-white leading-[1.1] mb-6 md:mb-8">
               {myStory.title}
             </h2>
           </motion.div>
 
-          <div className="prose prose-lg prose-stone dark:prose-invert max-w-none font-serif text-stone-gray dark:text-gray-300 leading-relaxed text-lg">
+          <div className="prose prose-lg prose-stone dark:prose-invert max-w-none font-serif text-stone-gray dark:text-gray-300 leading-relaxed text-base md:text-lg">
             {/* Paragraph 1 with Drop Cap */}
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="first-letter:text-8xl first-letter:font-bold first-letter:text-terracota first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] font-serif"
+              className="first-letter:text-6xl md:first-letter:text-8xl first-letter:font-bold first-letter:text-terracota first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] font-serif"
             >
               {myStory.paragraphs[0]}
             </motion.p>
@@ -89,7 +89,7 @@ export default function MyStorySection() {
                 }
               </strong>
             </motion.p>
-            <div className="w-24 h-[2px] bg-terracota/70  my-6" />
+            <div className="w-16 md:w-24 h-[2px] bg-terracota/70 my-4 md:my-6" />
             {/* Paragraph 3 */}
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -107,10 +107,13 @@ export default function MyStorySection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="border-l-4 border-terracota pl-6 py-2 mt-8"
+            className="border-l-4 border-terracota pl-4 md:pl-6 py-2 mt-6 md:mt-8"
           >
-            <p className="text-2xl md:text-3xl font-serif italic text-navy-deep dark:text-warm-white leading-tight">
-              {myStory.quote}
+            <p className="text-xl md:text-2xl font-serif italic text-navy-deep dark:text-warm-white leading-tight mb-4 md:mb-6">
+              &quot;{myStory.quote}&quot;
+            </p>
+            <p className="text-base md:text-lg text-stone-gray dark:text-gray-400 font-serif">
+              {myStory.belief}
             </p>
           </motion.div>
         </div>

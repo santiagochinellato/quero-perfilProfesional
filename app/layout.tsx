@@ -6,6 +6,7 @@ import Providers from "@/components/providers";
 import SmoothScroll from "@/components/smooth-scroll";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
+import LoadingScreen from "@/components/loading-screen";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -67,6 +68,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -80,6 +84,7 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${caveat.variable} ${holiday.variable} antialiased bg-warm-white dark:bg-[#0F172A]`}
       >
         <Providers>
+          <LoadingScreen />
           <SmoothScroll />
           <Navbar />
           <main className="min-h-screen">{children}</main>

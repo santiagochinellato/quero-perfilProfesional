@@ -17,20 +17,36 @@ export default function AuthoritySection() {
           {authority.title}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {authority.items.map((item, idx) => (
+        <div className="space-y-12 mb-16">
+          {authority.categories.map((category, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="flex items-center gap-4 p-4 rounded-xl bg-ice-gray dark:bg-white/5"
+              className="text-left bg-white dark:bg-white/5 p-8 rounded-2xl shadow-sm border border-stone-gray/10 dark:border-white/10"
             >
-              <Award className="w-6 h-6 text-terracota shrink-0" />
-              <span className="text-left font-medium text-navy-deep dark:text-gray-200">
-                {item}
-              </span>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-terracota/10 rounded-lg">
+                  {/* Icon mapping would be ideal here, but using fallback for now or need imports */}
+                  <Award className="w-6 h-6 text-terracota" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-navy-deep dark:text-warm-white">
+                  {category.title}
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {category.items.map((item, itemIdx) => (
+                  <div key={itemIdx} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-terracota mt-2 shrink-0"></div>
+                    <span className="text-stone-gray dark:text-gray-300 font-medium leading-relaxed">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>

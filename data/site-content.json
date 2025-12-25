@@ -1,188 +1,463 @@
 {
   "hero": {
+    "label": "Coach Ontológico para Equipos Científicos y de Salud",
     "title": "Hablo tu idioma. Entiendo tu estrés.",
     "subtitle": "Te ayudo a liderar sin quemarte.",
-    "description": "Soy Martín Quero, Doctor en Ciencias y Coach Ontológico. Durante más de 10 años trabajé en investigación, dirigí equipos, viví el estrés del laboratorio y la presión de la clínica. Hoy acompaño a profesionales y equipos de salud, ciencia e innovación a gestionar el estrés, comunicar con claridad y liderar sin agotarse.",
+    "description": "Soy Martín Quero, veterinario, Doctor en Ciencias Veterinarias, docente universitario, investigador científico y coach ontológico profesional. Mi trabajo integra el rigor del pensamiento científico y la profundidad del desarrollo personal, acompañando a profesionales y equipos de salud, ciencia e innovación a gestionar el estrés, comunicar con claridad y liderar sin agotarse.",
     "ctaPrimary": "Agendá una sesión exploratoria sin costo",
+    "ctaSecondary": "Conocer mi trayectoria",
     "whatsappLink": "https://wa.me/5492615581683"
   },
+
   "problem": {
     "label": "¿Te suena familiar?",
     "title": "La excelencia técnica no debería costar tu salud",
+    "description": "Trabajo especialmente con equipos académicos, científicos y de salud: profesionales que enfrentan altos niveles de exigencia, responsabilidad y complejidad, y que buscan desarrollarse sin perder coherencia, humanidad y sentido.",
     "questions": [
       "¿Tu equipo es brillante técnicamente pero falla en lo humano?",
       "¿El estrés está afectando los resultados clínicos o de investigación?",
       "¿Tus profesionales evitan conversaciones difíciles con pacientes o tutores?",
       "¿La rotación de personal es alta y el clima laboral tenso?"
     ],
-    "closing": "No estás solo. Y no es solo \"parte del trabajo\"."
+    "closing": "No estás solo. Y no es solo \"parte del trabajo\".",
+    "approach": "Mi estilo es cercano, respetuoso y profundo, con intervenciones claras, fundamentadas y orientadas a generar cambios sostenibles en el tiempo."
   },
+
   "myStory": {
     "label": "Mi historia →",
-    "title": "De la Ciencia al Coaching",
-    "imageCaption": "“La ciencia me enseñó rigor. La vida me enseñó humanidad.”",
-    "quote": "No dejé la ciencia. Encontré una forma distinta de aplicarla.",
+    "title": "De la Ciencia al Coaching: Por qué hago esto",
+    "imageCaption": "\"La ciencia me enseñó rigor. La vida me enseñó humanidad.\"",
+    "quote": "No dejé la ciencia. Encontré una forma distinta de aplicarla: ayudando a profesionales como vos a trabajar mejor sin destruirse en el proceso.",
     "paragraphs": [
-      "Pasé más de 10 años en investigación científica. Publiqué papers, dirigí proyectos, gestioné equipos, di clases en la universidad. Conocí la adrenalina de un descubrimiento y el peso de las responsabilidades interminables.",
-      "También viví el estrés crónico. La frustración de los rechazos. Las guardias interminables. La sensación de que \"nunca alcanza\". Vi colegas brillantes abandonar carreras por agotamiento.",
-      "En ese camino descubrí que las herramientas para gestionar el factor humano existen, son concretas, y funcionan."
-    ]
+      "A lo largo de mi trayectoria he trabajado en contextos académicos, científicos y profesionales de la salud, acompañando a personas, equipos y organizaciones en procesos de desarrollo, aprendizaje y transformación.",
+      "Pasé más de 10 años en investigación científica. Publiqué papers, dirigí proyectos, gestioné equipos, di clases en la universidad. También viví el estrés crónico. La frustración de los rechazos. Las guardias interminables. La sensación de que \"nunca alcanza\".",
+      "En ese camino descubrí algo: la mayoría de los problemas en equipos técnicos no son técnicos. Son humanos. Y aprendí que las herramientas para gestionarlos existen, son concretas, y funcionan.",
+      "Cuento con una sólida formación en coaching ontológico y enfoque sistémico, incluyendo constelaciones familiares aplicadas a contextos personales y organizacionales. Esta mirada me permite abordar a las personas y a los equipos de manera integral, considerando tanto los aspectos técnicos y cognitivos como las dinámicas emocionales, relacionales y sistémicas que influyen en los resultados."
+    ],
+    "belief": "Creo en el desarrollo personal como una herramienta estratégica para mejorar la práctica profesional, la calidad de los vínculos, los resultados y el impacto que cada persona y organización genera en su entorno."
   },
+
   "differentials": {
     "label": "→ Lo que me diferencia",
     "title": "No soy un coach externo. Soy uno de ustedes.",
+    "description": "Mi formación y experiencia interdisciplinaria aportan una integración única entre rigor, profundidad y humanidad:",
     "items": [
       {
         "icon": "Microscope",
+        "badge": "Científico e Investigador",
         "title": "VETERINARIO (Ph.D.)",
-        "description": "Doctor en Ciencias Veterinarias, UNL. +10 años en investigación y docencia."
+        "description": "Doctor en Ciencias Veterinarias, UNL. +10 años en investigación y docencia. Pensamiento crítico, claridad conceptual y abordaje estructurado.",
+        "impact": "Evito enfoques simplistas o meramente motivacionales"
       },
       {
-        "icon": "Users",
-        "title": "COACH ONTOLÓGICO",
-        "description": "Especializado en equipos de alta exigencia y comunicación en contextos críticos."
+        "icon": "Lightbulb",
+        "badge": "Docente Universitario",
+        "title": "EDUCADOR Y FACILITADOR",
+        "description": "Capacidad pedagógica, orden en los procesos y claridad para traducir reflexiones profundas en aprendizajes aplicables.",
+        "impact": "Diseño experiencias formativas con enfoque humano"
+      },
+      {
+        "icon": "HeartPulse",
+        "badge": "Profesional de la Salud",
+        "title": "CONTEXTO CLÍNICO",
+        "description": "Ética, responsabilidad y comprensión real de contextos de alta exigencia emocional.",
+        "impact": "Comprendo la presión del trabajo con vidas"
+      },
+      {
+        "icon": "MessageCircle",
+        "badge": "Coach Ontológico",
+        "title": "COACHING PROFESIONAL",
+        "description": "Especializado en equipos de alta exigencia, comunicación en contextos críticos y prevención de burnout.",
+        "impact": "Herramientas concretas para cambios sostenibles"
       },
       {
         "icon": "Network",
-        "title": "FACILITADOR SISTÉMICO",
-        "description": "Trabajo con enfoque sistémico para conflictos organizacionales y dinámicas de equipo."
+        "badge": "Facilitador Sistémico",
+        "title": "ENFOQUE SISTÉMICO",
+        "description": "Mirada sistémica que permite observar dinámicas invisibles, lealtades y patrones relacionales que influyen en decisiones y bloqueos.",
+        "impact": "Trabajo con conflictos organizacionales y dinámicas de equipo"
       }
     ],
-    "closing": "No vengo a 'motivarte'. Vengo a darte herramientas probadas que uso yo mismo desde hace años."
+    "closing": "No vengo a \"motivarte\". Vengo a darte herramientas probadas que uso yo mismo desde hace años.",
+    "integration": "Esta integración permite acompañar procesos de transformación profunda, respetuosa y sostenible, cuidando tanto el bienestar de la persona como su desempeño en la vida real."
   },
+
   "services": {
     "title": "Cómo puedo ayudarte",
+    "subtitle": "Procesos diseñados para contextos de alta exigencia técnica y humana",
     "items": [
       {
+        "id": "veterinary-health",
+        "icon": "Stethoscope",
+        "label": "Para Profesionales de la Salud",
         "title": "Tu equipo técnico es brillante. Hagamos que funcione humanamente.",
+        "highlighted": "Módulo: Relación Veterinario–Tutor–Paciente",
+        "intro": "Diseñé y facilito un módulo formativo que integra coaching, comunicación clínica y ética profesional, orientado a desarrollar habilidades blandas, gestión emocional y conversaciones difíciles en contextos veterinarios y de salud.",
         "questions": [
           "¿Tus veterinarios evitan hablar de eutanasia?",
-          "¿Los tutores se quejan de falta de empatía?"
+          "¿Los tutores se quejan de falta de empatía?",
+          "¿Hay conflictos internos que afectan la atención?"
         ],
-        "details": [
+        "approach": "Desde una perspectiva de coaching ontológico y desarrollo personal, el módulo combina clases teóricas estructuradas, dinámicas vivenciales, role-playing de conversaciones difíciles, espacios de reflexión personal y herramientas de autoconocimiento.",
+        "topics": [
           "Comunicación de malas noticias",
-          "Gestión del duelo",
+          "Eutanasia y gestión del duelo",
           "Relación médico-paciente / veterinario-tutor",
+          "Limitaciones económicas y toma de decisiones éticas",
+          "Cuidados paliativos y mal pronóstico",
+          "Conflictos, reclamos y manejo de la culpa",
           "Protocolos para situaciones difíciles"
         ],
-        "result": "Equipos que salvan vidas sin perder su humanidad.",
+        "result": "Formar profesionales técnicamente competentes y humanamente presentes, capaces de sostener conversaciones difíciles, construir vínculos de confianza con los tutores y cuidar su propio bienestar emocional.",
+        "impact": "Alto nivel de participación, interés y satisfacción. Los estudiantes destacan la utilidad práctica del contenido y su aplicabilidad inmediata tanto en el ámbito profesional como personal.",
+        "transferable": "Totalmente transferible a clínicas, hospitales y equipos interdisciplinarios, ya que aborda problemáticas transversales a todos los entornos de cuidado, servicio y liderazgo.",
         "cta": "Consultar por programa para clínicas"
       },
       {
+        "id": "scientific-teams",
+        "icon": "FlaskConical",
+        "label": "Para Equipos Científicos y de I+D",
         "title": "Investigar no debería quemarte",
+        "highlighted": "Coaching de Equipos en Organizaciones de Ciencia y Salud",
+        "intro": "Diseño y facilito procesos de coaching de equipos orientados a organizaciones del ámbito de la veterinaria, la salud, la ciencia, la innovación y los servicios técnicos especializados.",
         "questions": [
           "¿Tu equipo sufre estrés crónico?",
-          "¿Los rechazos de papers afectan la moral?"
+          "¿Los rechazos de papers afectan la moral?",
+          "¿El burnout es \"parte del trabajo\"?"
         ],
-        "details": [
+        "approach": "Desde una perspectiva de coaching ontológico, desarrollo personal, PNL y enfoque sistémico-organizacional, los procesos integran: diagnóstico relacional, diseño de intervenciones a medida, sesiones vivenciales, conversaciones estructuradas y herramientas prácticas aplicables al trabajo cotidiano.",
+        "topics": [
           "Tolerancia a la frustración en investigación",
-          "Gestión del estrés en alta exigencia",
+          "Gestión del estrés en entornos de alta exigencia",
           "Prevención de burnout",
-          "Comunicación efectiva interdisciplinaria"
+          "Comunicación efectiva y escucha activa en equipos técnicos",
+          "Feedback constructivo y seguro",
+          "Gestión de tensiones, sobrecarga laboral y prioridades",
+          "Diferenciación entre culpa y responsabilidad",
+          "Clarificación de roles, acuerdos y reglas de funcionamiento",
+          "Adaptación al cambio y transformación organizacional"
         ],
-        "result": "Equipos que investigan mejor porque trabajan mejor.",
+        "result": "Generar equipos más conscientes, ordenados y colaborativos, capaces de sostener conversaciones difíciles con respeto, asumir responsabilidades compartidas y mejorar su desempeño.",
+        "impact": "Impacto en resultados operativos, clima laboral, salud emocional de las personas y sostenibilidad de los equipos a largo plazo.",
+        "focus": "Equipos interdisciplinarios que operan en contextos de alta exigencia técnica, presión por resultados, responsabilidad profesional y toma de decisiones complejas.",
         "cta": "Consultar por programa para laboratorios"
       },
       {
+        "id": "leadership",
+        "icon": "Users",
+        "label": "Para Líderes y Directores",
         "title": "Liderás técnicos. Te ayudo a liderarlos humanamente.",
+        "highlighted": "Desarrollo de Liderazgo para Perfiles Técnicos",
+        "intro": "Acompañamiento a directores de área, jefes de equipo y coordinadores técnicos en el desarrollo de habilidades de liderazgo humano sin perder autoridad técnica.",
         "questions": [
-          "¿Sos director de área o coordinador técnico?",
-          "¿Tu desafío no es la ciencia, sino gestionar personas?"
+          "¿Sos director de área, jefe de equipo o coordinador técnico?",
+          "¿Tu desafío no es la ciencia, sino gestionar personas?",
+          "¿Necesitás desarrollar soft skills sin perder rigurosidad?"
         ],
-        "details": [
+        "approach": "Procesos individuales y grupales que integran coaching ontológico, enfoque sistémico y desarrollo de competencias de liderazgo consciente.",
+        "topics": [
           "Gestión de equipos de alto rendimiento",
-          "Resolución de conflictos",
+          "Resolución de conflictos organizacionales",
           "Comunicación efectiva con tu equipo",
-          "Habilidades blandas sin perder autoridad técnica"
+          "Desarrollo de habilidades blandas sin perder autoridad técnica",
+          "Toma de decisiones en contextos complejos",
+          "Gestión de la presión y el estrés del liderazgo",
+          "Construcción de confianza y cohesión en equipos"
         ],
-        "result": "Líderes respetados por su expertise y seguidos por su humanidad.",
-        "cta": "Consultar por coaching individual"
+        "result": "Líderes que son respetados por su expertise y seguidos por su humanidad.",
+        "impact": "Fortalecimiento del liderazgo consciente, mejora en la gestión de equipos y resultados sostenibles.",
+        "cta": "Consultar por coaching individual o grupal"
+      },
+      {
+        "id": "onboarding",
+        "icon": "Users",
+        "label": "Para Organizaciones y Universidades",
+        "title": "Programa Inicial de Desarrollo Personal",
+        "highlighted": "Integración Humana para Grupos Ingresantes",
+        "intro": "Diseño y facilito procesos iniciales de desarrollo personal orientados a grupos que ingresan a universidades u organizaciones, acompañando su adaptación, integración y construcción de pertenencia.",
+        "questions": [
+          "¿Querés que tu equipo nuevo se integre con bases sólidas?",
+          "¿Buscás prevenir el desgaste temprano y el abandono?",
+          "¿Necesitás fortalecer la pertenencia desde el inicio?"
+        ],
+        "approach": "Cuando un grupo ingresa a una institución, se activan procesos humanos de incertidumbre, adaptación y construcción de identidad. La forma en que se acompaña a las personas resulta determinante para su desempeño, bienestar y permanencia.",
+        "topics": [
+          "Inserción consciente a sistemas institucionales",
+          "Comprensión de la lógica institucional y roles",
+          "Gestión emocional frente a incertidumbre y exigencia",
+          "Comunicación efectiva y construcción de vínculos",
+          "Integración al grupo y sentido de pertenencia",
+          "Diferenciación entre responsabilidad personal y expectativas externas",
+          "Prevención del desgaste temprano y desmotivación",
+          "Consolidación del grupo y cierre de etapas iniciales"
+        ],
+        "result": "Grupos más conscientes, ordenados y responsables desde el inicio, capaces de integrarse al sistema con claridad, compromiso y bienestar.",
+        "impact": "Impacto positivo en permanencia académica, integración organizacional, clima humano y sostenibilidad de los grupos.",
+        "cta": "Consultar por programa de integración"
+      },
+      {
+        "id": "individual",
+        "icon": "UserRound",
+        "label": "Sesiones Individuales",
+        "title": "Coaching 1 a 1: Acompañamiento personalizado",
+        "highlighted": "Desarrollo Personal y Profesional",
+        "intro": "Sesiones individuales de coaching para personas que buscan claridad, orden interno y coherencia en momentos de decisión, transición o transformación personal y profesional.",
+        "questions": [
+          "¿Estás en un momento de decisión importante?",
+          "¿Necesitás claridad sobre tu propósito y dirección?",
+          "¿Sentís que el estrés afecta tu desempeño y bienestar?"
+        ],
+        "approach": "Espacio confidencial, profundo y personalizado, donde cada proceso se construye a medida. El foco está en desarrollar mayor conciencia, responsabilidad y criterio propio para generar cambios sostenibles.",
+        "topics": [
+          "Clarificación de objetivos personales y profesionales",
+          "Toma de decisiones en contextos de incertidumbre",
+          "Gestión emocional frente a exigencia y responsabilidad",
+          "Comunicación consciente y conversaciones difíciles",
+          "Límites, autocuidado y sostenibilidad personal",
+          "Revisión del rol profesional e identidad personal",
+          "Propósito, sentido y motivación",
+          "Inicio, tránsito y cierre de etapas vitales"
+        ],
+        "result": "Que cada persona pueda habitar sus decisiones con mayor claridad, coherencia y libertad, fortaleciendo su autonomía y capacidad de responder conscientemente a los desafíos.",
+        "distinctive": "Integración entre rigor, profundidad y humanidad, evitando enfoques simplistas. Acompañamiento que respeta tanto el bienestar de la persona como su desempeño en la vida real.",
+        "cta": "Agendar sesión exploratoria"
       }
-    ]
+    ],
+    "closing": "Todos los procesos están pensados para equipos y personas que operan en contextos de alta exigencia, donde las habilidades humanas y relacionales son tan determinantes como el conocimiento técnico."
   },
+
   "testimonials": {
+    "label": "Experiencias reales",
     "title": "Lo que dicen quienes trabajaron conmigo",
+    "subtitle": "Testimonios de profesionales, líderes y equipos que participaron en procesos de coaching",
     "list": [
       {
         "quote": "Martín no solo entiende la presión de trabajar en una clínica veterinaria, la vivió. Sus herramientas para comunicar eutanasias transformaron la forma en que nuestro equipo acompaña a los tutores.",
-        "author": "Dra. [Nombre Placeholder]",
-        "role": "Directora Clínica Veterinaria"
+        "author": "Dra. [Nombre]",
+        "role": "Directora Clínica Veterinaria",
+        "context": "Programa: Relación Veterinario-Tutor-Paciente"
       },
       {
         "quote": "Después de 5 años en investigación estaba al borde del burnout. El coaching con Martín me ayudó a gestionar la frustración de los rechazos sin perder el amor por lo que hago.",
-        "author": "Lic. [Nombre Placeholder]",
-        "role": "Investigador"
+        "author": "Lic. [Nombre]",
+        "role": "Investigador CONICET",
+        "context": "Sesiones individuales de coaching"
       },
       {
         "quote": "Contraté a Martín para un taller de soft skills con mi equipo técnico. Lo que me sorprendió fue que no lo sintieron como 'un curso más'. Lo sintieron como un colega que los entendía.",
-        "author": "Ing. [Nombre Placeholder]",
-        "role": "Gerente I+D"
+        "author": "Ing. [Nombre]",
+        "role": "Gerente I+D",
+        "context": "Coaching de equipos"
       }
-    ]
-  },
-  "authority": {
-    "title": "Mi respaldo técnico",
-    "items": [
-      "Doctor en Ciencias Veterinarias (Ph.D.), UNL",
-      "+10 años como Profesor Universitario",
-      "Director de Proyectos de Investigación (CONICET)",
-      "12 publicaciones científicas internacionales",
-      "58 presentaciones en congresos",
-      "Coach Ontológico Profesional (AACOP)"
     ],
-    "ctaCV": "Ver mi trayectoria completa (PDF)"
+    "note": "Los testimonios reflejan el alto nivel de participación, interés y satisfacción de quienes participaron en los procesos, destacando la utilidad práctica del contenido y su aplicabilidad tanto en el ámbito profesional como personal."
   },
-  "contact": {
-    "title": "Hablemos de tu equipo",
-    "description": "¿Liderás un equipo técnico que necesita apoyo? ¿Sos profesional y sentís que el estrés te está superando? Te ofrezco una sesión exploratoria sin costo.",
-    "formFields": {
-      "name": "Nombre completo",
-      "email": "Email",
-      "phone": "Teléfono",
-      "type": "Tipo de consulta",
-      "typeOptions": ["Profesional individual", "Líder de equipo", "Institución"],
-      "message": "Contame brevemente qué necesitás"
-    },
-    "cta": "Solicitar sesión exploratoria",
-    "direct": {
-      "whatsapp": "+54 (261) 155581683",
-      "email": "aamartinquero@gmail.com"
-    }
-  },
-  "navbar": {
-    "logoAlt": "Martín Quero - Coach Ontológico",
-    "menu": [
-      {"name": "Inicio", "href": "#"},
-      {"name": "Servicios", "href": "#servicios"},
-      {"name": "Sobre Mí", "href": "#sobre-mi"},
-      {"name": "Testimonios", "href": "#testimonios"},
-      {"name": "Contacto", "href": "#contacto"}
-    ],
-    "whatsappLink": "https://wa.me/5492615581683"
-  },
-  "footer": {
-    "title": "Martín Quero",
-    "subtitle": "Coach Ontológico Profesional",
-    "description": "Doctor en Ciencias Veterinarias (Ph.D.)",
-    "location": "Mendoza, Argentina",
-    "email": "aamartinquero@gmail.com",
-    "phone": "+54 (261) 155581683",
-    "social": {
-      "linkedin": "https://linkedin.com/in/martin-quero-a7b9b61a3"
-    },
-    "copyright": "© 2025 Martín Quero. Todos los derechos reservados."
-  },
+
   "gallery": {
     "label": "Momentos reales",
     "title": "En acción",
-    "description": "Más de 10 años acompañando equipos técnicos, científicos y de salud en Argentina.",
+    "description": "Más de 10 años acompañando equipos técnicos, científicos y de salud en Argentina. Fotos reales de talleres, consultorías y sesiones de coaching.",
+    "note": "Priorizamos autenticidad sobre perfección estética. Estas imágenes reflejan el trabajo real en organizaciones, clínicas, laboratorios y espacios educativos.",
     "images": [
-      "/images/gallery-6.jpg",
-      "/images/gallery-5.jpg",
-      "/images/gallery-4.jpg",
-      "/images/gallery-3.jpg",
-      "/images/gallery-2.jpg",
-      "/images/gallery-1.jpg"
+      {
+        "url": "/images/socialwall-1.webp",
+        "caption": "Taller con equipo veterinario",
+        "alt": "Martín Quero facilitando taller en clínica veterinaria"
+      },
+      {
+        "url": "/images/socialwall-2.webp",
+        "caption": "Dinámica grupal con equipo científico",
+        "alt": "Equipo en dinámica de coaching grupal"
+      },
+      {
+        "url": "/images/socialwall-3.webp",
+        "caption": "Sesión de coaching individual",
+        "alt": "Martín Quero en sesión 1 a 1"
+      },
+      {
+        "url": "/images/socialwall-4.webp",
+        "caption": "Trabajo colaborativo",
+        "alt": "Post-its en pizarra durante taller"
+      },
+      {
+        "url": "/images/socialwall-5.webp",
+        "caption": "Cierre de taller con equipo",
+        "alt": "Grupo al finalizar proceso de coaching"
+      },
+      {
+        "url": "/images/socialwall-6.webp",
+        "caption": "Programa inicial universitario",
+        "alt": "Taller de desarrollo personal con estudiantes"
+      }
     ]
+  },
+
+  "authority": {
+    "label": "Trayectoria académica",
+    "title": "Mi respaldo técnico",
+    "intro": "Una década de experiencia en investigación científica, docencia universitaria y práctica profesional, con sólida formación en coaching ontológico y enfoque sistémico.",
+    "categories": [
+      {
+        "icon": "GraduationCap",
+        "title": "Formación Académica",
+        "items": [
+          "Doctor en Ciencias Veterinarias (Ph.D.), Universidad Nacional del Litoral",
+          "Veterinario, Universidad Juan Agustín Maza",
+          "Coach Ontológico Profesional y de Equipos (Fundación Universitas / AACOP)",
+          "Facilitador en Configuraciones Sistémicas"
+        ]
+      },
+      {
+        "icon": "University",
+        "title": "Docencia e Investigación",
+        "items": [
+          "+10 años como Profesor Universitario en Genética y Clínica",
+          "Director de Proyectos de Investigación Científica (CONICET)",
+          "Coordinador de Investigación - Facultad de Ciencias Veterinarias",
+          "11 direcciones de tesis de grado"
+        ]
+      },
+      {
+        "icon": "FileText",
+        "title": "Producción Científica",
+        "items": [
+          "12 publicaciones en revistas científicas internacionales",
+          "58 presentaciones en congresos nacionales e internacionales",
+          "8 publicaciones en revistas de divulgación",
+          "2 capítulos de libros"
+        ]
+      },
+      {
+        "icon": "Award",
+        "title": "Reconocimientos",
+        "items": [
+          "8 premios en reuniones científicas y académicos",
+          "Diploma de Honor (Mérito académico)",
+          "Revisor de artículos para revistas internacionales"
+        ]
+      }
+    ],
+    "ctaCV": "Ver mi trayectoria completa (PDF)",
+    "closing": "Esta combinación de formación científica, experiencia docente y entrenamiento en coaching me permite ofrecer un acompañamiento que integra rigor, profundidad y humanidad."
+  },
+
+  "contact": {
+    "label": "Conversemos",
+    "title": "Hablemos de tu equipo",
+    "description": "¿Liderás un equipo técnico que necesita apoyo? ¿Sos profesional y sentís que el estrés te está superando? ¿Representás una institución que busca programas de bienestar?",
+    "offer": "Te ofrezco una sesión exploratoria sin costo para entender tu situación y ver si puedo ayudarte.",
+    "formFields": {
+      "name": {
+        "label": "Nombre completo",
+        "placeholder": "Tu nombre"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "tu@email.com"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "+54 (261) 123-4567"
+      },
+      "type": {
+        "label": "¿Cómo te puedo ayudar?",
+        "options": [
+          "Profesional individual",
+          "Líder de equipo",
+          "Institución / RRHH",
+          "Universidad / Educación",
+          "Otro"
+        ]
+      },
+      "message": {
+        "label": "Contame brevemente qué necesitás",
+        "placeholder": "Describe tu situación en 3-4 líneas (es suficiente)"
+      }
+    },
+    "cta": "Solicitar sesión exploratoria",
+    "direct": {
+      "title": "O contactame directamente:",
+      "whatsapp": "+54 (261) 155581683",
+      "email": "aamartinquero@gmail.com",
+      "location": "Mendoza, Argentina"
+    },
+    "note": "Primera sesión sin cargo. Respondo dentro de las 24hs hábiles."
+  },
+
+  "navbar": {
+    "logoText": "Martín Quero",
+    "logoAlt": "Martín Quero - Coach Ontológico",
+    "menu": [
+      {"name": "Inicio", "href": "#hero"},
+      {"name": "Sobre Mí", "href": "#sobre-mi"},
+      {"name": "Servicios", "href": "#servicios"},
+      {"name": "Experiencia", "href": "#galeria"},
+      {"name": "Testimonios", "href": "#testimonios"},
+      {"name": "Contacto", "href": "#contacto"}
+    ],
+    "cta": {
+      "text": "Sesión exploratoria",
+      "href": "#contacto"
+    },
+    "whatsappLink": "https://wa.me/5492615581683"
+  },
+
+  "footer": {
+    "brand": {
+      "name": "Martín Quero",
+      "tagline": "Coach Ontológico Profesional",
+      "description": "Doctor en Ciencias Veterinarias (Ph.D.)",
+      "credentials": "Facilitador en Configuraciones Sistémicas",
+      "location": "Mendoza, Argentina"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "text": "Integro el rigor del pensamiento científico y la profundidad del desarrollo personal, acompañando a profesionales y equipos de salud, ciencia e innovación en procesos de transformación sostenible."
+    },
+    "links": {
+      "title": "Navegación",
+      "items": [
+        {"name": "Servicios", "href": "#servicios"},
+        {"name": "Sobre Mí", "href": "#sobre-mi"},
+        {"name": "Testimonios", "href": "#testimonios"},
+        {"name": "Experiencia", "href": "#galeria"},
+        {"name": "Contacto", "href": "#contacto"}
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "email": "aamartinquero@gmail.com",
+      "phone": "+54 (261) 155581683",
+      "whatsapp": "https://wa.me/5492615581683",
+      "location": "Mendoza, Argentina"
+    },
+    "social": {
+      "title": "Redes",
+      "linkedin": "https://linkedin.com/in/martin-quero-a7b9b61a3"
+    },
+    "legal": {
+      "copyright": "© 2025 Martín Quero. Todos los derechos reservados.",
+      "developedBy": "Sitio desarrollado por Digital Patagonia"
+    }
+  },
+
+  "meta": {
+    "siteTitle": "Martín Quero | Coach Ontológico para Equipos Científicos y de Salud",
+    "siteDescription": "Doctor en Ciencias y Coach Ontológico especializado en equipos técnicos, científicos y de salud. Acompañamiento en gestión del estrés, liderazgo, comunicación en contextos críticos y prevención de burnout.",
+    "keywords": [
+      "Coach ontológico",
+      "Coaching para científicos",
+      "Coaching para veterinarios",
+      "Gestión del estrés",
+      "Burnout en investigación",
+      "Liderazgo en equipos técnicos",
+      "Comunicación en salud",
+      "Coaching Mendoza",
+      "Desarrollo de equipos científicos",
+      "Coaching para investigadores"
+    ],
+    "author": "Martín Quero",
+    "locale": "es_AR",
+    "ogImage": "/og-image.jpg"
   }
 }
