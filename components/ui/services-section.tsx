@@ -93,13 +93,18 @@ export default function ServicesSection() {
                     </p>
                   </div>
 
-                  <button className="group w-full px-4 py-2.5 md:px-6 md:py-3 bg-transparent border border-navy-deep text-navy-deep dark:border-white dark:text-white font-semibold rounded-lg hover:bg-navy-deep hover:text-white dark:hover:bg-white dark:hover:text-navy-deep transition-all flex items-center justify-between text-sm md:text-base">
+                  <a
+                    href="https://wa.me/5492615581683"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group w-full px-4 py-2.5 md:px-6 md:py-3 bg-transparent border border-navy-deep text-navy-deep dark:border-white dark:text-white font-semibold rounded-lg hover:bg-navy-deep hover:text-white dark:hover:bg-white dark:hover:text-navy-deep transition-all flex items-center justify-between text-sm md:text-base"
+                  >
                     <span>
                       {service.cta.replace("Consultar por", "").trim() ||
                         service.cta}
                     </span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

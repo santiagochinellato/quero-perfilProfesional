@@ -1,0 +1,217 @@
+{
+  "perfil_profesional": {
+    "nombre_completo": "Martín Quero",
+    "titulos_principales": [
+      "Veterinario (Ph.D.)",
+      "Coach Ontológico Profesional y de Equipos",
+      "Facilitador en Configuraciones Sistémicas"
+    ],
+    "datos_personales": {
+      "dni": "33.578.655",
+      "fecha_nacimiento": "23/04/1988",
+      "lugar_nacimiento": "Mendoza, Argentina",
+      "edad": "37 años",
+      "nacionalidad": "Argentina",
+      "direccion": "Javier Morales 2158, Godoy Cruz, Mendoza, Argentina. CP: 5501",
+      "contacto": {
+        "telefono": "+54 (261) 155581683",
+        "emails": [
+          "aamartinquero@gmail.com",
+          "mquero@profesores.umaza.edu.ar"
+        ],
+        "linkedin": "linkedin.com/in/martin-quero-a7b9b61a3/"
+      }
+    }
+  },
+  "educacion_formal": [
+    {
+      "titulo": "Doctor en Ciencias Veterinarias (Ph.D.)",
+      "institucion": "Facultad de Ciencias Veterinarias, Universidad Nacional del Litoral",
+      "periodo": "2016-2023",
+      "nota_final": "10 (Sobresaliente)"
+    },
+    {
+      "titulo": "Veterinario",
+      "institucion": "Facultad de Ciencias Veterinarias y Ambientales, Universidad Juan Agustín Maza",
+      "periodo": "2006-2013",
+      "promedio": "8.00 (Diploma de honor)"
+    },
+    {
+      "titulo": "Bachillerato en Ambiente y Salud",
+      "institucion": "Escuela Técnica Ecológica Ambientalista PS-119",
+      "periodo": "2001-2005",
+      "distincion": "Medalla de honor/ Abanderado"
+    }
+  ],
+  "titulaciones_complementarias": [
+    {
+      "titulo": "Facilitador en Constelaciones Familiares (Configuraciones Sistémicas)",
+      "institucion": "Centro Latinoamericano de Constelaciones Familiares",
+      "periodo": "2022-2025"
+    },
+    {
+      "titulo": "Coach de Equipos con Enfoque Sistémico",
+      "institucion": "IDS // Escuela de Coaching Ontológico Argentino (ECOA)",
+      "aval": "Avalado por AACOP",
+      "anio": "2025"
+    },
+    {
+      "titulo": "Coach Ontológico Profesional",
+      "institucion": "Fundación Universitas// Fundación Empowerment",
+      "aval": "Avalado por AACOP",
+      "periodo": "2015-2017"
+    }
+  ],
+  "experiencia_laboral": {
+    "investigacion_y_academia": [
+      {
+        "cargo": "Director de Proyecto de Investigación Científica",
+        "lugar": "IAVAS/CONICET - Universidad Juan Agustín Maza",
+        "periodo": "2023-Actualidad"
+      },
+      {
+        "cargo": "Profesor Adjunto/Coordinador de Prácticas Profesionales Orientadas en Clínica de Pequeños Animales",
+        "lugar": "Universidad Juan Agustín Maza",
+        "periodo": "2021-Actualidad"
+      },
+      {
+        "cargo": "Profesor Adjunto- Cátedra de Genética Veterinaria",
+        "lugar": "Universidad Juan Agustín Maza",
+        "periodo": "2014-Actualidad"
+      },
+      {
+        "cargo": "Coordinador de Investigación Científica",
+        "lugar": "Facultad de Ciencias Veterinarias y Ambientales - Área de Ciencia y Técnica. Universidad Juan Agustín Maza",
+        "periodo": "2020-2024"
+      },
+      {
+        "cargo": "Director de carrera de Grado (Lic. en Ciencias Ambientales)",
+        "lugar": "Universidad Juan Agustín Maza",
+        "periodo": "2016-2020"
+      },
+      {
+        "cargo": "Profesor Adjunto- Cátedra de Ecotoxicología",
+        "lugar": "Universidad Juan Agustín Maza",
+        "periodo": "2015-2020"
+      },
+      {
+        "cargo": "Asistente de Coordinación en Investigación",
+        "lugar": "Universidad Juan Agustín Maza",
+        "periodo": "2014-2019"
+      }
+    ],
+    "sector_privado": [
+      {
+        "cargo": "Socio Fundador - Asesor Técnico Veterinario",
+        "empresa": "BENTOLIFE S.A.",
+        "periodo": "2021-Actualidad",
+        "funciones": "Asesoramiento técnico comercial (bentonita), gestión de documentación y exportación"
+      },
+      {
+        "cargo": "Director Veterinario / Propietario",
+        "empresa": "Centro Médico Veterinario Máximo Paz",
+        "periodo": "2021-2023",
+        "funciones": "Diagnóstico clínico, venta de productos, gestión con proveedores"
+      },
+      {
+        "cargo": "Director Técnico Veterinario",
+        "empresa": "MINERVET S.A.",
+        "periodo": "2018-2021",
+        "funciones": "Asesoramiento técnico (salud intestinal, aditivos), ventas, capacitación, ensayos experimentales"
+      }
+    ]
+  },
+  "formacion_continua": {
+    "cursos_posgrado": [
+      "Ornitología (IADIZA, 2019)",
+      "Epistemología y metodología de la Ciencia (UNCuyo, 2018)",
+      "Mecanismos moleculares de toxicidad (UNL, 2017)",
+      "Histología animal comparada (UBA, 2017)",
+      "Diseño de estudios en ecología de enfermedades (UNL, 2016)",
+      "Introducción a la estadística Multivariada (UNRC, 2016)",
+      "Nuevas Tecnologías aplicadas a estudios ecotoxicológios (UNL, 2016)",
+      "Bioestadística (UNCuyo, 2014)",
+      "Presentaciones orales efectivas (UMaza, 2014)",
+      "Metodología general de muestreo de fauna (IADIZA, 2013)",
+      "Animales en investigación: aspectos éticos y científicos (UMaza/UNCuyo, 2013)",
+      "Técnicas basadas en PCR para hongos toxicogénicos (INTA Mendoza, 2011)"
+    ],
+    "pasantias": [
+      "Departamento de Medicina Veterinaria de Delphinus (Delfines, 2017)",
+      "Laboratorio de Micología, UNRC (ADN, PCR, 2012)",
+      "Reserva de Biosfera Nacuñón (Aves, 2012)",
+      "Laboratorio de Investigación de Ecología de Enfermedades, Esperanza (Parasitología, 2011)"
+    ]
+  },
+  "investigacion": {
+    "proyectos_destacados": [
+      "Director: Evaluación de aditivo a base de Cannabis sativa en producción avícola (2023-2026)",
+      "Asesor externo: Evaluación genotóxica de cipermetrina, fipronil e imidacloprid (2022-2024)",
+      "Investigador principal: Hemoparásitos aviares en desierto del Monte (2022-2024)",
+      "Investigador principal: Aspectos tóxicos de insecticidas en Mendoza (2019-2022)",
+      "Investigador principal: Cargas y riquezas parasitarias en aves silvestres (2019-2022)",
+      "Investigador ayudante: Animales centinelas de riesgo para salud ambiental (2017-2019)",
+      "Investigador ayudante: Plaguicidas agropecuarios sobre ovocitos bovinos (2014-2017)",
+      "Investigador ayudante: Animales como bioindicadores y daño genético (2014-2017)",
+      "Investigador ayudante: Biomonitoreo en trabajadores que aplican plaguicidas (2014-2015)"
+    ]
+  },
+  "produccion_cientifica": {
+    "publicaciones_revistas": [
+      "Quero et al. (2025). Effect on plasma cholinesterase levels... Ecotoxicology",
+      "Quero et al. (2025). Hematological profiles of wild birds... Veterinaria Mexico OA",
+      "Quero et al. (2024). Liver and kidney damage in quail embryos... Veterinary Research Communications",
+      "Méndez et al. (2022). Erythrocyte micronucleus cytome assay... Environmental Monitoring and Assessment",
+      "Quero et al. (2019). Plasma cholinesterase activities in wild birds... Environmental Toxicology and Chemistry",
+      "Quero et al. (2018). Frecuencia de micronúcleos... Revista de Investigaciones Veterinarias de Perú",
+      "Ferré et al. (2018). Potential risks of dietary exposure to chlorpyrifos... Environmental Monitoring and Assessment",
+      "Ferré et al. (2018). Ensayo de micronúcleos citoma bucal... Revista Int. de Contaminación Ambiental",
+      "Saldeña et al. (2018). Evento de intoxicación de perros... Revista de Investigaciones Veterinarias de Perú",
+      "Quero et al. (2016). Erythrocyte micronucleus cytome assay... Environmental Science and Pollution Research",
+      "Cuervo et al. (2011). Conocimiento Citogenético de las Aves de Argentina. Ornitología Neotropical",
+      "Martin et al. (2011). Un caso de hermafroditismo verdadero... Archivos Medicina Veterinaria"
+    ],
+    "libros_y_capitulos": [
+      "Capítulo: Cuando las aves callan nos cantan un problema (2023)",
+      "Capítulo: Intoxicaciones humanas y animales por plaguicidas (2019)"
+    ],
+    "divulgacion": [
+      "Artículos en Revista de Prácticas Veterinarias (2024-2025)",
+      "Artículo en Revista Col. Médicos Veterinarios Mendoza (2023)",
+      "Artículos en Veterinaria Digital / MINERVET S.A. (2020)"
+    ]
+  },
+  "becas_y_premios": {
+    "becas": [
+      "Beca Posdoctoral CONICET (2024-2027)",
+      "Beca Doctoral CONICET (2015-2020)",
+      "Becas de Investigación UMaza (Varios periodos: 2007-2014)",
+      "Beca a la Excelencia UMaza (2006-2011)"
+    ],
+    "premios": [
+      "Mejor poster en Mutagénesis (Soc. Arg. Genética, 2022)",
+      "Mejor Poster en Epidemiología (Jornadas Int. Veterinaria, 2022)",
+      "Mejor Poster Investigación Científica (SETAC, 2018)",
+      "Mejor Poster Investigación Área Salud (UMAZA, 2015)",
+      "Diploma de Honor - Segundo Mejor Promedio (UMaza, 2014)",
+      "Primer Escolta Bandera Nacional (2009, 2010)"
+    ]
+  },
+  "otros_datos": {
+    "idiomas": [
+      "Español (Nativo)",
+      "Inglés (Nivel Intermedio)"
+    ],
+    "licencia_conducir": "Categoría B1 (Argentina)",
+    "certificaciones_extra": [
+      "Mediación (2018)",
+      "Gestión colaborativa de conflictos (2018)"
+    ],
+    "revision_pares": [
+      "Journal of Agriculture and Food Chemistry",
+      "Biocell",
+      "Environmental Science and Pollution Research",
+      "European Zoological Journal"
+    ]
+  }
+}

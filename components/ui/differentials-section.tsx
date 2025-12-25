@@ -24,7 +24,10 @@ export default function DifferentialsSection() {
   const { differentials } = siteContent;
 
   return (
-    <section className="py-16 md:py-24 px-5 md:px-6 bg-warm-white dark:bg-[#152031] relative overflow-hidden">
+    <section
+      id="diferenciales"
+      className="py-16 md:py-24 px-5 md:px-6 bg-warm-white dark:bg-[#152031] relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0 }}

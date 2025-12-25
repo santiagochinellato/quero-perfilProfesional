@@ -19,7 +19,7 @@ export default function LoadingScreen() {
   const letters = text.split("");
 
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -70,9 +70,15 @@ export default function LoadingScreen() {
                 </motion.span>
               ))}
               <motion.span
-                initial={{ opacity: 0, scale: 0 }}
+                initial={{ opacity: 0, scale: 2 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 2.2, duration: 0.5 }}
+                transition={{
+                  delay: 2.2,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 15,
+                  mass: 0.8,
+                }}
                 className="text-terracota inline-block ml-1"
               >
                 .
@@ -81,7 +87,7 @@ export default function LoadingScreen() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.0, duration: 0.8 }}
+              transition={{ delay: 2.7, duration: 0.8 }}
               className="text-lg md:text-2xl font-serif italic text-terracota text-center tracking-wider"
             >
               Desarrollo personal aplicado

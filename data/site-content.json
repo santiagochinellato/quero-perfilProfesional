@@ -389,7 +389,9 @@
     "logoAlt": "Martín Quero -  Desarrollo personal aplicado",
     "menu": [
       {"name": "Inicio", "href": "#hero"},
+      {"name": "Realidad", "href": "#problema"},
       {"name": "Sobre Mí", "href": "#sobre-mi"},
+      {"name": "Diferenciales", "href": "#diferenciales"},
       {"name": "Servicios", "href": "#servicios"},
       {"name": "Experiencia", "href": "#galeria"},
       {"name": "Testimonios", "href": "#testimonios"},
@@ -417,6 +419,7 @@
     "links": {
       "title": "Navegación",
       "items": [
+        {"name": "Inicio", "href": "#hero"},
         {"name": "Servicios", "href": "#servicios"},
         {"name": "Sobre Mí", "href": "#sobre-mi"},
         {"name": "Testimonios", "href": "#testimonios"},
@@ -437,7 +440,7 @@
     },
     "legal": {
       "copyright": "© 2025 Martín Quero. Todos los derechos reservados.",
-      "developedBy": "Sitio desarrollado por Digital Patagonia"
+      "developedBy": "Diseñado y desarrollado por Digital Patagonia"
     }
   },
 

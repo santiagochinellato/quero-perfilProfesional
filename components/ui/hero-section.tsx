@@ -10,7 +10,10 @@ export default function HeroSection() {
   const { hero } = siteContent;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 md:py-28 px-5 md:px-6 overflow-hidden bg-warm-white dark:bg-[#0F172A]">
+    <section
+      className="relative min-h-[90vh] flex items-center pt-24 pb-12 md:py-28 px-5 md:px-6 overflow-hidden bg-warm-white dark:bg-[#0F172A]"
+      id="hero"
+    >
       {/* Background Texture/Grain */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply dark:mix-blend-overlay"></div>
 
@@ -76,7 +79,7 @@ export default function HeroSection() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#sobre-mi"
+              href="#trayectoria"
               className="group w-full sm:w-auto justify-center px-8 py-3.5 md:py-4 bg-transparent border-2 border-navy-deep text-navy-deep dark:border-white dark:text-white font-bold text-[.9rem] md:text-[.75rem] rounded-full hover:bg-navy-deep hover:text-white dark:hover:bg-white dark:hover:text-navy-deep transition-all hover:scale-105 inline-flex items-center gap-2"
             >
               {hero.ctaSecondary}

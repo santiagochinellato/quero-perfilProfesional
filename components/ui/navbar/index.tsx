@@ -19,13 +19,13 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 print:hidden ${
         isScrolled || isMobileMenuOpen
-          ? "bg-white/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-stone-gray/10 shadow-sm"
+          ? "bg-warm-white/90 dark:bg-[#0F172A]/90 backdrop-blur-md shadow-sm border-b border-stone-gray/10 dark:border-white/5"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between ">
+      <div className="max-w-7xl mx-auto px-4 md:px-2 h-20 flex items-center justify-between ">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <Logo />

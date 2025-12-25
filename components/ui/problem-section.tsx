@@ -8,7 +8,10 @@ export default function ProblemSection() {
   const { problem } = siteContent;
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 bg-warm-white dark:bg-[#0F172A] relative overflow-hidden">
+    <section
+      id="problema"
+      className="py-16 md:py-24 px-4 md:px-6 bg-warm-white dark:bg-[#0F172A] relative overflow-hidden"
+    >
       <div className="max-w-3xl mx-auto">
         {/* Label */}
         <div className="text-center mb-4 md:mb-6">

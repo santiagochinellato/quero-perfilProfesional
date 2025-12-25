@@ -11,17 +11,22 @@ export default function NavbarDesktop() {
 
   return (
     <div className="hidden md:flex items-center gap-8">
-      {navbar.menu.map((item) => (
-        <a
-          key={item.href}
-          href={item.href}
-          className={cn(
-            "text-sm font-medium text-navy-deep/80 dark:text-warm-white/80 hover:text-terracota dark:hover:text-terracota transition-colors"
-          )}
-        >
-          {item.name}
-        </a>
-      ))}
+      {navbar.menu.map((item) => {
+        const isHash = item.href.startsWith("#");
+        const href = isHash && pathname !== "/" ? `/${item.href}` : item.href;
+
+        return (
+          <a
+            key={item.name}
+            href={href}
+            className={cn(
+              "text-sm font-medium text-navy-deep/80 dark:text-warm-white/80 hover:text-terracota dark:hover:text-terracota transition-colors"
+            )}
+          >
+            {item.name}
+          </a>
+        );
+      })}
       <a
         href={navbar.whatsappLink}
         target="_blank"

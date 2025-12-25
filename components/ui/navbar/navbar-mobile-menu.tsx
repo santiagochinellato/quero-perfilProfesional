@@ -3,6 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import siteContent from "@/data/site-content.json";
 
+import { usePathname } from "next/navigation";
+
 interface NavbarMobileMenuProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
@@ -13,6 +15,7 @@ export default function NavbarMobileMenu({
   setIsOpen,
 }: NavbarMobileMenuProps) {
   const { navbar } = siteContent;
+  const pathname = usePathname();
 
   return (
     <AnimatePresence>
@@ -24,16 +27,22 @@ export default function NavbarMobileMenu({
           className="md:hidden overflow-hidden bg-white/95 dark:bg-navy-deep/95 backdrop-blur-md border-b border-stone-gray/10"
         >
           <div className="flex flex-col p-6 gap-4">
-            {navbar.menu.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-navy-deep dark:text-warm-white hover:text-terracota transition-colors"
-              >
-                {item.name}
-              </a>
-            ))}
+            {navbar.menu.map((item) => {
+              const isHash = item.href.startsWith("#");
+              const href =
+                isHash && pathname !== "/" ? `/${item.href}` : item.href;
+
+              return (
+                <a
+                  key={item.href}
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg font-medium text-navy-deep dark:text-warm-white hover:text-terracota transition-colors"
+                >
+                  {item.name}
+                </a>
+              );
+            })}
             <a
               href={navbar.whatsappLink}
               target="_blank"
