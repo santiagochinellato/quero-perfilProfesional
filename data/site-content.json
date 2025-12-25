@@ -386,7 +386,7 @@
 
   "navbar": {
     "logoText": "Martín Quero",
-    "logoAlt": "Martín Quero - Coach Ontológico",
+    "logoAlt": "Martín Quero -  Desarrollo personal aplicado",
     "menu": [
       {"name": "Inicio", "href": "#hero"},
       {"name": "Sobre Mí", "href": "#sobre-mi"},
@@ -405,7 +405,7 @@
   "footer": {
     "brand": {
       "name": "Martín Quero",
-      "tagline": "Coach Ontológico Profesional",
+      "tagline": "Desarrollo personal aplicado",
       "description": "Doctor en Ciencias Veterinarias (Ph.D.)",
       "credentials": "Facilitador en Configuraciones Sistémicas",
       "location": "Mendoza, Argentina"
@@ -442,7 +442,7 @@
   },
 
   "meta": {
-    "siteTitle": "Martín Quero | Coach Ontológico para Equipos Científicos y de Salud",
+    "siteTitle": "Martín Quero |  Desarrollo personal aplicadod",
     "siteDescription": "Doctor en Ciencias y Coach Ontológico especializado en equipos técnicos, científicos y de salud. Acompañamiento en gestión del estrés, liderazgo, comunicación en contextos críticos y prevención de burnout.",
     "keywords": [
       "Coach ontológico",

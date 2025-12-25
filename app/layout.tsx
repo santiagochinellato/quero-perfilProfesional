@@ -39,8 +39,7 @@ const holiday = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://martinquero.com"),
   title: {
-    default:
-      "Martín Quero | Coach Ontológico para Equipos Científicos y de Salud",
+    default: "Martín Quero | Desarrollo personal aplicado",
     template: "%s | Martín Quero",
   },
   description:
