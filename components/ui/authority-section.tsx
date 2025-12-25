@@ -1,8 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, FileText, GraduationCap, University } from "lucide-react";
+import {
+  Award,
+  FileText,
+  GraduationCap,
+  University,
+  ArrowRight,
+} from "lucide-react";
 import siteContent from "@/data/site-content.json";
+import Link from "next/link";
+import React from "react";
 
 export default function AuthoritySection() {
   const { authority } = siteContent;
@@ -72,24 +80,24 @@ export default function AuthoritySection() {
           })}
         </div>
 
-        <div className="text-center">
-          {/* Desktop Button: Go to /cv */}
-          <a
+        <div className="flex justify-center mt-10 md:mt-12 hidden md:flex">
+          <Link
             href="/cv"
-            className="hidden md:inline-flex items-center gap-2 px-8 py-3.5 bg-navy-deep text-white rounded-full hover:bg-navy-deep/90 transition-all shadow-lg shadow-navy-deep/10 font-medium text-sm tracking-wide"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-navy-deep text-white rounded-full hover:bg-navy-deep/90 transition-all shadow-lg shadow-navy-deep/10 font-medium text-sm tracking-wide"
           >
-            <FileText className="w-4 h-4" />
-            {authority.ctaCV}
-          </a>
+            {authority.ctaCV} <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
 
-          {/* Mobile Button: Download PDF directly */}
+        <div className="flex justify-center mt-10 md:mt-12 md:hidden">
           <a
-            href="/martinQueroCV.pdf"
-            download
-            className="md:hidden inline-flex items-center gap-2 px-8 py-3.5 bg-navy-deep text-white rounded-full hover:bg-navy-deep/90 transition-all shadow-lg shadow-navy-deep/10 font-medium text-sm tracking-wide"
+            href={`${
+              process.env.NEXT_PUBLIC_BASE_PATH || ""
+            }/martinQueroCV.pdf`}
+            download="Martin_Quero_CV.pdf"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-navy-deep text-white rounded-full hover:bg-navy-deep/90 transition-all shadow-lg shadow-navy-deep/10 font-medium text-sm tracking-wide"
           >
-            <FileText className="w-4 h-4" />
-            {authority.ctaCV} (PDF)
+            {authority.ctaCV} <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>

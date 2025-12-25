@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import siteContent from "@/data/site-content.json";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface NavbarMobileMenuProps {
   isOpen: boolean;
@@ -33,14 +34,14 @@ export default function NavbarMobileMenu({
                 isHash && pathname !== "/" ? `/${item.href}` : item.href;
 
               return (
-                <a
+                <Link
                   key={item.href}
                   href={href}
                   onClick={() => setIsOpen(false)}
                   className="text-lg font-medium text-navy-deep dark:text-warm-white hover:text-terracota transition-colors"
                 >
                   {item.name}
-                </a>
+                </Link>
               );
             })}
             <a

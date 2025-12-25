@@ -16,7 +16,7 @@ export default function NavbarDesktop() {
         const href = isHash && pathname !== "/" ? `/${item.href}` : item.href;
 
         return (
-          <a
+          <Link
             key={item.name}
             href={href}
             className={cn(
@@ -24,7 +24,7 @@ export default function NavbarDesktop() {
             )}
           >
             {item.name}
-          </a>
+          </Link>
         );
       })}
       <a

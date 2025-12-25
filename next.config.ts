@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BASE_PATH: isProd ? "/quero-perfilProfesional" : "",
   },
   reactCompiler: true,
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [
