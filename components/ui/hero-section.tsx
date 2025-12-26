@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import siteContent from "@/data/site-content.json";
-import martinQueroImg from "@/public/images/martinQuero.webp";
+import martinQueroImg from "@/public/images/MQuero.webp";
 
 export default function HeroSection() {
   const { hero } = siteContent;
@@ -106,7 +106,7 @@ export default function HeroSection() {
                 src={martinQueroImg}
                 alt="Dr. Martín Quero"
                 fill
-                className="object-cover"
+                className="object-cover object-top scale-150 origin-top"
                 priority
               />
               {/* Actual Placeholder Text if no image */}

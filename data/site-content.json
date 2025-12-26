@@ -3,7 +3,7 @@
     "label": "Coach Ontológico para Equipos Científicos y de Salud",
     "title": "Hablo tu idioma. Entiendo tu estrés.",
     "subtitle": "Te ayudo a liderar sin quemarte.",
-    "description": "Soy Martín Quero, veterinario, Doctor en Ciencias Veterinarias, docente universitario, investigador científico y coach ontológico profesional. Mi trabajo integra el rigor del pensamiento científico y la profundidad del desarrollo personal, acompañando a profesionales y equipos de salud, ciencia e innovación a gestionar el estrés, comunicar con claridad y liderar sin agotarse.",
+    "description": "Soy Martín Quero, veterinario, Doctor en Ciencias Veterinarias, docente universitario, investigador científico y coach ontológico profesional. Mi trabajo integra el rigor del pensamiento científico y la profundidad del desarrollo personal,  acompañando a profesionales, equipos y empresas a gestionar el estrés, comunicar con claridad y liderar sin agotarse.",
     "ctaPrimary": "Agendá una sesión exploratoria sin costo",
     "ctaSecondary": "Conocer mi trayectoria",
     "whatsappLink": "https://wa.me/5492615581683"
@@ -90,7 +90,7 @@
         "id": "veterinary-health",
         "icon": "Stethoscope",
         "label": "Para Profesionales de la Salud",
-        "title": "Tu equipo técnico es brillante. Hagamos que funcione humanamente.",
+        "title": "Tu equipo médico es brillante. Hagamos que funcione humanamente.",
         "highlighted": "Módulo: Relación Veterinario–Tutor–Paciente",
         "intro": "Diseñé y facilito un módulo formativo que integra coaching, comunicación clínica y ética profesional, orientado a desarrollar habilidades blandas, gestión emocional y conversaciones difíciles en contextos veterinarios y de salud.",
         "questions": [
@@ -146,7 +146,7 @@
         "id": "leadership",
         "icon": "Users",
         "label": "Para Líderes y Directores",
-        "title": "Liderás técnicos. Te ayudo a liderarlos humanamente.",
+        "title": "Liderás técnicos y profesionales. Te ayudo a liderarlos humanamente.",
         "highlighted": "Desarrollo de Liderazgo para Perfiles Técnicos",
         "intro": "Acompañamiento a directores de área, jefes de equipo y coordinadores técnicos en el desarrollo de habilidades de liderazgo humano sin perder autoridad técnica.",
         "questions": [
@@ -166,7 +166,7 @@
         ],
         "result": "Líderes que son respetados por su expertise y seguidos por su humanidad.",
         "impact": "Fortalecimiento del liderazgo consciente, mejora en la gestión de equipos y resultados sostenibles.",
-        "cta": "Consultar por coaching individual o grupal"
+        "cta": "Consultar por coaching para equipos"
       },
       {
         "id": "onboarding",
