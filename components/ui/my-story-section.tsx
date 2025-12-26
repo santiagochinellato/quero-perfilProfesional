@@ -69,7 +69,7 @@ export default function MyStorySection() {
             </motion.p>
 
             {/* Paragraph 2 with Bold highlight */}
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -88,7 +88,7 @@ export default function MyStorySection() {
                   )[1]
                 }
               </strong>
-            </motion.p>
+            </motion.p> */}
             <div className="w-16 md:w-24 h-[2px] bg-terracota/70 my-4 md:my-6" />
             {/* Paragraph 3 */}
             <motion.p
