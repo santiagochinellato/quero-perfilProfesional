@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import siteContent from "@/data/site-content.json";
 import Image from "next/image";
 
+// Import images statically for GitHub Pages compatibility
+import social1 from "@/public/images/socialwall-1.webp";
+import social2 from "@/public/images/socialwall-2.webp";
+import social3 from "@/public/images/socialwall-3.webp";
+import social4 from "@/public/images/socialwall-4.webp";
+import social5 from "@/public/images/socialwall-5.webp";
+import social6 from "@/public/images/socialwall-6.webp";
+
+const galleryImages = [social1, social2, social3, social4, social5, social6];
+
 export default function GallerySection() {
   const { gallery } = siteContent;
 
@@ -46,7 +56,7 @@ export default function GallerySection() {
 
                 {/* Image */}
                 <Image
-                  src={image.url}
+                  src={galleryImages[idx]}
                   alt={image.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105 filter sepia-[0.15] group-hover:sepia-0"

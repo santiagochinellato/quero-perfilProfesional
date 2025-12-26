@@ -11,6 +11,7 @@ import {
   Globe,
 } from "lucide-react";
 import cvData from "@/data/cv.json";
+import martinQueroCV from "@/public/images/martinQuero.webp";
 
 import { useEffect } from "react";
 
@@ -87,7 +88,7 @@ export default function CVPage() {
 
             <div className="relative w-32 h-32 shrink-0 rounded-lg overflow-hidden border-2 border-[#1B3A52]/10 grayscale-[10%]">
               <Image
-                src="/images/martinQuero.webp"
+                src={martinQueroCV}
                 alt={perfil_profesional.nombre_completo}
                 fill
                 className="object-cover"
